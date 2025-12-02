@@ -242,6 +242,8 @@ main {
 }
 
 .informationer {
+  display: flex;
+  flex-direction: column;
   background-color: var(--farve_3);
   width: 100%;
 }
