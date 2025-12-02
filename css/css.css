@@ -264,6 +264,8 @@ main {
 
 /*--------------FAQ sektion--------------*/
 .accordion {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--farve_1);
   cursor: pointer;
   padding: 24px 64px;
@@ -289,11 +291,16 @@ main {
   transition: max-height 0.4s ease-out, padding 0.3s ease;
 }
 
-.accordion.active + .svar {
-  background-color: var(--farve_1); /* Ny baggrundsfarve når foldet ud */
-  padding-bottom: 48px; /* Mere padding når åbnet */
-  transition: max-height 0.4s ease-out, padding 0.3s ease;
+.svar p {
+  padding-bottom: 24px;
 }
+
+.active.accordion .pil {
+  /*Her gør jeg sådan at når accordionen er aktiv (så har den nemlig de to klasser .active.acordion) skal billede i class'en pil rotere 180 grader */
+  transform: rotate(180deg);
+  transition: transform 0s ease;
+}
+
 /*--------------CTA sektion--------------*/
 
 /*-------------Footer---------------*/
