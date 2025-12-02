@@ -260,6 +260,42 @@ main {
   background-color: var(--farve_6);
 }
 
+/*--------------Anmeldelser sektion--------------*/
+
+/*--------------FAQ sektion--------------*/
+.accordion {
+  background-color: var(--farve_1);
+  cursor: pointer;
+  padding: 24px 64px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-top: #1a1a1a 1px solid;
+  outline: none;
+  transition: 0.6s;
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--farve_1);
+  padding: 24px 64px;
+}
+
+.svar {
+  max-height: 0px;
+  overflow: hidden;
+  background-color: var(--farve_1);
+  padding: 0px 64px;
+  transition: max-height 0.4s ease-out, padding 0.3s ease;
+}
+
+.accordion.active + .svar {
+  background-color: var(--farve_1); /* Ny baggrundsfarve når foldet ud */
+  padding-bottom: 48px; /* Mere padding når åbnet */
+  transition: max-height 0.4s ease-out, padding 0.3s ease;
+}
+/*--------------CTA sektion--------------*/
+
 /*-------------Footer---------------*/
 /* Footer */
 footer {

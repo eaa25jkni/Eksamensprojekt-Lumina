@@ -29,3 +29,26 @@ dots.forEach((dot) => {
       ".png"; /*Med denne linje skifter vi billedet. Den virker således at den tager stien, hvor den går ned i mappen "/img " og så finder den så det billede der matcher med den value der står inde i ("value") +.png. billederne den søger efter er navngivet valuen, så hvis vi siger vi har ("popPink"), finder browseren billedet "popPink" +.png og det sættes ind på pladsen i højtalerFarve */
   });
 });
+
+/*--------------Accordion--------------*/
+
+const accordionKnapper =
+  document.querySelectorAll(
+    ".accordion"
+  ); /*Den finder alle elementer med class'en accordion og samler alle elementer i en variable */
+
+accordionKnapper.forEach((knap) => {
+  knap.addEventListener("click", function () {
+    this.classList.toggle("active");
+    const svar =
+      this
+        .nextElementSibling; /*den finder det næste element efter knappen, som i dette tilfælde er svaret der skal vises*/
+    if (svar.style.maxHeight) {
+      svar.style.maxHeight = null;
+    } /*Den siger at hvis svar maxHeight er sat, så skal den lukkes (højden sættes til null)*/ else {
+      svar.style.maxHeight = svar.scrollHeight + "px";
+    } /*ellers skal den åbnes, ved at sætte maxHeight til scrollHeight (den fulde højde af elementet)*/
+  });
+});
+
+/*Loop- den kører i gennem listen med alle knapperne og for hver knap den tildeler hver knap en eventlistener. Hvor den skal lytte efter et klik før at funktionen udføres. Funktionen der udføres siger at når knappen klikkes på, så tilføjes class'en active til knappen*/
