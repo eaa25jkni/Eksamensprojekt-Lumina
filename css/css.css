@@ -198,6 +198,16 @@ main {
 }
 
 /*-----Højdepunkter-------*/
+.højdepunkter {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: center;
+  padding-bottom: 24px;
+  gap: 56px;
+  width: 100%;
+}
+
 .højdepunktKort {
   display: flex;
   flex-direction: column;
@@ -213,24 +223,27 @@ main {
   overflow: hidden;
 }
 
-.højdepunkter {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  text-align: center;
-  padding-bottom: 24px;
-  gap: 56px;
-}
-
 /*------Funktioner sektion------*/
-.funktionContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.funktionerContainer {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  gap: 32px;
+  background-color: var(--farve_4);
+}
+.højtalerFarve {
+  background-color: var(--farve_6);
 }
 
 .højtalerFarve img {
   width: 400px;
   height: 600px;
+  object-fit: cover;
+}
+
+.informationer {
+  background-color: var(--farve_3);
+  width: 100%;
 }
 
 .farver {
@@ -272,7 +285,7 @@ main {
   width: 100%;
   text-align: left;
   border: none;
-  border-top: #1a1a1a 1px solid;
+  border-top: #6c6c6c43 2px solid;
   outline: none;
   transition: 0.6s;
 }
@@ -289,6 +302,7 @@ main {
   background-color: var(--farve_1);
   padding: 0px 64px;
   transition: max-height 0.4s ease-out, padding 0.3s ease;
+  border-bottom: #6c6c6c43 2px solid;
 }
 
 .svar p {
