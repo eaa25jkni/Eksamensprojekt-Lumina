@@ -1,7 +1,18 @@
 console.log("Javascript kører");
 
+/*-------CTA knap til købssiden--------*/
 document.querySelector(".CTAknap").addEventListener("click", function () {
   window.location.href = "buy.html";
+});
+
+/*----Array med de fire farver højtaleren fås i */
+const farver = ["moonlightWhite", "popPink", "lavenderViolet", "sageGreen"];
+
+/*Her bruger jeg dom-manipulation til at tilføje farverne til siden */
+farver.forEach((farve) => {
+  document.querySelector(
+    ".farver"
+  ).innerHTML += `<button class="dots ${farve}" value="${farve}"></button>`;
 });
 
 /*------------Farve skifter------------ */
