@@ -76,7 +76,7 @@ const anmeldelser = [
   {
     id: "1",
     img: "img/anmeldelse1.svg",
-    titel: "Lyden fylder hele rummet",
+    titel: "Lyden fylder <br> hele rummet",
     tekst: "Lige meget hvor du er, er lyden lige god",
     rating: "img/rating45.svg",
     navn: "Simone A.",
@@ -92,7 +92,7 @@ const anmeldelser = [
   {
     id: "3",
     img: "img/anmeldelse3.svg",
-    titel: "Ikke bange for lidt snavs",
+    titel: "Ikke bange for <br> lidt snavs",
     tekst: "En holdbar højttaler, man nemt kan tage med overalt",
     rating: "img/rating5.svg",
     navn: "Sarah J.",
@@ -132,14 +132,14 @@ const anmeldelseContainer = document.querySelector("#anmeldelseContainer");
 
 function displayAnmeldelse(anmeldelseObject) {
   const anmeldelseHTML = `
-<article class="anmeldelseKort">
+    <article class="anmeldelseKort">
       <img src="${anmeldelseObject.img}" 
            alt="Billede af ${anmeldelseObject.navn}" 
            class="anmeldelseBillede" />
 
       <div class="anmeldelseInfo">
-        <h3>${anmeldelseObject.titel}</h3>
-        <img class="anmeldelseRating" src="${anmeldelseObject.rating}" alt="Rating af ${anmeldelseObject.navn} stjerner">
+        <h3 class="anmeldelseTitel">${anmeldelseObject.titel}</h3>
+        <img class="anmeldelseRating" src="${anmeldelseObject.rating}" alt="Rating af ${anmeldelseObject.navn}">
         <p class="anmeldelseTekst">"${anmeldelseObject.tekst}"</p>
         <p class="anmeldelseNavn">- ${anmeldelseObject.navn}</p>
       </div>

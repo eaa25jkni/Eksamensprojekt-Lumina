@@ -202,7 +202,7 @@ main {
 .højdepunkter {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: space-between;
   text-align: center;
   padding-bottom: 24px;
   gap: 56px;
@@ -293,6 +293,56 @@ main {
 }
 
 /*--------------Anmeldelser sektion--------------*/
+#karrusel {
+  background-color: var(--farve_4);
+}
+
+#Container {
+  background-color: var(--farve_2);
+}
+
+#anmeldelseContainer {
+  display: flex;
+  flex-direction: row;
+
+  gap: 24px;
+  background-color: yellow;
+}
+
+.anmeldelseKort {
+  position: relative;
+  background-color: var(--farve_5);
+  width: 600px;
+  height: 100%;
+}
+
+.anmeldelseBillede {
+  display: block;
+  width: 100%;
+}
+
+.anmeldelseInfo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.422);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.anmeldelseInfo:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.anmeldelseTekst {
+  padding: 16px;
+}
 
 /*--------------FAQ sektion--------------*/
 .accordion {
