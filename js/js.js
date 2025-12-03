@@ -15,7 +15,7 @@ farver.forEach((farve) => {
   ).innerHTML += `<button class="dots ${farve}" value="${farve}"></button>`;
 });
 
-/*------------Farve skifter------------ */
+/*------------Farve skifter------------  */
 /* Her kommer der en funktion som gør at man kan klikke på farve knapperne og så skifte billedet til den matchende farve */
 const dots =
   document.querySelectorAll(
@@ -42,7 +42,6 @@ dots.forEach((dot) => {
 });
 
 /*--------------Accordion--------------*/
-
 const accordionKnapper =
   document.querySelectorAll(
     ".accordion"
@@ -50,8 +49,11 @@ const accordionKnapper =
 
 accordionKnapper.forEach((knap) => {
   knap.addEventListener("click", function () {
-    this.classList.toggle("active");
-    const svar =
+    this.classList.toggle(
+      "active"
+    ); /*Loop- den kører i gennem listen med alle knapperne og for hver knap den tildeler hver knap en eventlistener. Hvor den skal lytte efter et klik før at funktionen udføres. Funktionen der udføres siger at når knappen klikkes på, så tilføjes class'en active til knappen*/
+
+    let svar =
       this
         .nextElementSibling; /*den finder det næste element efter knappen, som i dette tilfælde er svaret der skal vises*/
     if (svar.style.maxHeight) {
@@ -61,5 +63,3 @@ accordionKnapper.forEach((knap) => {
     } /*ellers skal den åbnes, ved at sætte maxHeight til scrollHeight (den fulde højde af elementet)*/
   });
 });
-
-/*Loop- den kører i gennem listen med alle knapperne og for hver knap den tildeler hver knap en eventlistener. Hvor den skal lytte efter et klik før at funktionen udføres. Funktionen der udføres siger at når knappen klikkes på, så tilføjes class'en active til knappen*/

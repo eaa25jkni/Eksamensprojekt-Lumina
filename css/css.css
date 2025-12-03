@@ -43,6 +43,7 @@ h2 {
   font-size: 56px;
   color: var(--farve_2);
   text-align: center;
+  padding: 24px;
 }
 
 h3 {
@@ -81,7 +82,7 @@ main {
   margin-right: 120px;
 }
 
-/* NAVBAR CSS */
+/* ------------NAVBAR CSS-----------------*/
 .navbar {
   display: flex;
   flex-direction: row;
@@ -284,6 +285,13 @@ main {
   background-color: var(--farve_6);
 }
 
+.svar ul {
+  font-family: var(--broedtekst);
+  font-size: 1rem;
+  color: var(--farve_2);
+  padding-bottom: 24px;
+}
+
 /*--------------Anmeldelser sektion--------------*/
 
 /*--------------FAQ sektion--------------*/
@@ -364,6 +372,11 @@ footer p:hover {
     background-color: aquamarine;
   }
 
+  main {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
   h1 {
     font-size: 48px;
   }
@@ -389,6 +402,11 @@ footer p:hover {
 @media (min-width: 601px) and (max-width: 1024px) {
   body {
     background-color: rgb(252, 21, 198);
+  }
+
+  main {
+    margin-left: 56px;
+    margin-right: 56x;
   }
 
   h1 {
