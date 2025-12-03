@@ -1,0 +1,166 @@
+/**
+ * file: css/css.css
+ * purpose: styling
+ **/
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lacquer&family=Permanent+Marker&family=Ribeye&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asimovian&family=Gloock&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asimovian&family=Bebas+Neue&family=Gloock&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asimovian&family=Bebas+Neue&family=Bevan:ital@0;1&family=Gloock&display=swap");
+
+/* Margin og kanter fjernes i visse browsere */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variable: farver og typografi*/
+:root {
+  /* farver */
+  --farve_1: #fdfdfd; /* Lys */
+  --farve_2: #2e2e2e; /* Mørkest */
+  --farve_3: #f9c7e1; /* Lys Pink */
+  --farve_4: #cd3488; /* Mørk Pink */
+  --farve_5: #faecf3; /* Bleg Pink*/
+
+  /* typografi */
+  --broedtekst: Verdana, Geneva, Tahoma, sans-serif;
+  --titel: Gloock, serif;
+  --overskrifter: "bevan", cursive;
+  --underskrifter: "bebas neue", cursive;
+}
+
+/* Body farver og fonte til resten af siden */
+body {
+  font-family: var(--broedtekst);
+  background-color: var(--farve_5);
+  color: var(--farve_2);
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* TYPOGRAFI */
+h1 {
+  font-family: var(--titel);
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: var(--overskrifter);
+  color: var(--farve_1);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, 0px -1px 0 #000, 1px 0px 0 #000, 0px 1px 0 #000,
+    -1px 0px 0 #000;
+}
+
+h3 {
+  font-family: var(--underskrifter);
+  font-size: 2rem;
+}
+
+h4 {
+  font-family: var(--underskrifter);
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: var(--broedtekst);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+/* LAYOUT: */
+
+.flex {
+  display: flex; /* Brug flexbox */
+  justify-content: flex-end; /* Juster placering af elementer */
+  gap: 10px; /* Juster afstand mellem elementer */
+  margin-left: 2rem; /* Juster afstand fra venstre kant */
+}
+
+img {
+  width: 20%;
+}
+
+header {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.cart {
+  gap: 20px;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+
+.logo img {
+  position: absolute; /* Absolut positionering */
+  top: 1rem; /* afstand fra toppen */
+  left: 50%; /* centrer horisontalt */
+  transform: translate(-50%); /* juster for perfekt centering */
+  text-align: center; /* centrer tekst */
+  width: 20vh; /* bredde */
+  height: auto; /* automatisk højde for at bevare proportioner */
+  list-style-type: none; /* fjern bullets */
+  text-decoration: none; /* fjern understregning */
+}
+
+.cta {
+  margin-left: 1rem;
+  margin-top: 1rem; /* afstand over */
+  background-color: var(--farve_1); /* baggrundsfarve */
+  color: var(--farve_2); /* tekstfarve */
+  padding: 0.8rem 1.5rem; /* indvendig afstand */
+  border-radius: 16px; /* afrundede hjørner */
+  font-size: 2rem; /* tekststørrelse */
+  font-family: var(--underskrifter); /* font */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* skyggeeffekt */
+  transition: background-color 0.3s, transform 0.3s; /* overgangseffekt */
+  text-decoration: none; /* fjern understregning */
+  display: inline-block; /* gør det til en blok for bedre klikområde */
+  margin-top: -10px;
+}
+
+.cta:hover {
+  background-color: var(--farve_3); /* ændr baggrundsfarve ved hover */
+  transform: translateY(-3px); /* løft knappen lidt ved hover */
+}
+
+/* Topnavigationen */
+nav {
+  min-height: 3vh; /* Mellemrum til toppen af siden */
+  background-color: transparent; /* Gør nav transparent */
+  position: absolute; /* Overlay hero section */
+  justify-self: flex-end; /* Placer til højre */
+  margin-right: 2rem; /* afstand fra højre kant */
+  position: fixed; /* Fastgør til toppen ved scroll */
+  margin-top: -5rem;
+}
+
+nav ul {
+  list-style-type: none; /* fjern bullets */
+  padding: 0; /* fjern padding */
+  margin: 0; /* fjern margins */
+}
+
+nav ul li {
+  min-width: 40px; /* Gør klikbare områder større */
+}
+
+nav a {
+  color: var(--farve_3); /* ændr link farve */
+  text-decoration: none; /* fjern understregning */
+  font-size: 2rem; /* Gør nav tekst større */
+}
+
+/* Logo */
+#logo {
+  width: 100px; /* Gør klikbare områder større */
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lumina Audio</title>
+    <title>Lumina One</title>
     <link rel="stylesheet" href="css/css.css" />
   </head>
 
@@ -11,15 +11,24 @@
     <nav class="navbar">
       <img src="img/logo.png" alt="Lumina Audio Logo" class="logo" />
       <ul class="navlinks">
-        <li>
-          <img src="img/profilIkon.svg" alt="Profil" class="NavIkon" />
+        <li class="navIkon">
+          <img src="img/profilIkon.svg" alt="Profil" id="profilIkon" />
         </li>
-        <li><img src="img/kurvIkon.svg" alt="Kurv" class="NavIkon" /></li>
-        <li>
-          <img src="img/burgermenuIkon.svg" alt="Burger Menu" class="NavIkon" />
+        <li class="navIkon"><img src="img/kurvIkon.svg" alt="Kurv" id="kurvIkon" /></li>
+        <li class="navIkon">
+          <img src="img/burgermenuIkon.svg" alt="Burger Menu" class="burgermenuIkon" />
         </li>
       </ul>
     </nav>
+
+    <div class="burgermenuÅben">
+        <a class="lukBurgermenu"><img src="img/kryds.svg" alt="kryds" class="krydsIkon">Luk</a>
+            <a>Køb nu</a>
+            <a href="#højdepunkterSektion">Højdepunkter</a>
+            <a href="#specifikationerSektion">Specifikationer</a>
+            <a href="#anmeldelserSektion">Anmeldelser</a>
+            <a href="#faqSektion">FAQ</a>
+    </div>
 
     <header class="heroIndhold">
       <video
@@ -64,7 +73,7 @@
 
     <main>
       <!---------- Højdepunkter sektion ------------>
-      <section >
+      <section id="højdepunkterSektion">
         <h2>Udforsk højdepunkterne</h2>
         <div class="højdepunkter">
         <article class="højdepunktKort">
@@ -75,7 +84,7 @@
             loop
             class="visuelHøjdepunkt"
           ></video>
-          <h3>Lyd skabt til at fylde rummet</h3>
+          <h3>Lyd skabt til at fylde hele rummet</h3>
           <p>
             Oplev en ny dimension af lyd med Lumina One's 360° immersive sound,
             der fylder et rum med rig, klar kraftfuld lyd uanset, hvor end du
@@ -115,7 +124,7 @@
 
       <!---------- Specifikationer sektion ------------>
 
-      <section class="funktionerSektion">
+      <section id="specifikationerSektion">
         <h2>Lumina One tæt på</h2>
 
         <div class="funktionerContainer">
@@ -190,12 +199,12 @@
       </section>
 
 
-      <!---------- Specifikationer sektion ------------>
+      <!---------- special feature sektion ------------>
 
       <!---------- Anmeldelser sektion ------------>
 
-      <section>
-        <h2>Anmeldelser</h2>
+      <section id="anmeldelserSektion">
+        <h2>#Anmeldelser</h2>
         <div id="karrusel">
             <div id="anmeldelseContainer"></div>
             <!------bliver tilføjet med javascript fra et array med objekter --->
@@ -203,7 +212,7 @@
       </section>
       
       <!---------- FAQ sektion ------------>
-      <section>
+      <section id="faqSektion">
         <h2>Ofte stillede spørgsmål</h2>
 
         <div>

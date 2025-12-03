@@ -11,6 +11,28 @@ function initApp() {
     window.location.href = "buy.html";
   });
 
+  /*-------knap til kurv--------*/
+  document.querySelector("#kurvIkon").addEventListener("click", function () {
+    window.location.href = "cart.html";
+  });
+
+  /*-------burgermenu--------*/
+
+  /*med denne kan vi åbne burgermenuen */
+  const burgermenuIkon = document.querySelector(".burgermenuIkon");
+  const burgermenuÅben = document.querySelector(".burgermenuÅben");
+
+  burgermenuIkon.addEventListener("click", function () {
+    burgermenuÅben.classList.toggle("åben");
+  });
+
+  /*med denne kan vi lukke burgermenuen */
+  const krydsIkon = document.querySelector(".krydsIkon");
+
+  krydsIkon.addEventListener("click", function () {
+    burgermenuÅben.classList.remove("åben");
+  });
+
   /*----Array med de fire farver højtaleren fås i */
   const farver = ["moonlightWhite", "popPink", "lavenderViolet", "sageGreen"];
 

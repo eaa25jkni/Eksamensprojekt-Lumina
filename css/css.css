@@ -89,6 +89,9 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
 }
 
 .navbar img {
@@ -105,6 +108,42 @@ main {
   height: 30px;
 }
 
+.navIkon {
+  cursor: pointer;
+}
+
+.burgermenuÅben {
+  background-color: var(--farve_4);
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: -250px; /*-250px*/
+  z-index: 20;
+  padding-top: 16px;
+  transition: right 0.3s ease;
+}
+
+.burgermenuÅben a {
+  display: block;
+  color: var(--farve_1);
+  padding: 16px 24px;
+  font-family: var(--titel);
+  font-size: 20px;
+  border-bottom: 1px solid var(--farve_1);
+  cursor: pointer;
+}
+
+a img {
+  height: 24px;
+  margin-right: 8px;
+}
+
+.åben.burgermenuÅben {
+  right: 0px;
+  scroll-behavior: none;
+}
+
 /*-------Hero sektion-------*/
 /*header {
   display: flex;
@@ -112,8 +151,9 @@ main {
 }*/
 
 .heroIndhold {
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .videoHeroBg {
