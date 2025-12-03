@@ -105,6 +105,22 @@ const anmeldelser = [
     rating: "img/rating4.svg",
     navn: "Sofie L.",
   },
+  {
+    id: "4",
+    img: "img/anmeldelse4.svg",
+    titel: "#Funktionel",
+    tekst: "Elsker den lysende bund. Perfekt når mørket falder på",
+    rating: "img/rating4.svg",
+    navn: "Sofie L.",
+  },
+  {
+    id: "4",
+    img: "img/anmeldelse4.svg",
+    titel: "#Funktionel",
+    tekst: "Elsker den lysende bund. Perfekt når mørket falder på",
+    rating: "img/rating4.svg",
+    navn: "Sofie L.",
+  },
 ];
 
 /*virker men ikke optimal */

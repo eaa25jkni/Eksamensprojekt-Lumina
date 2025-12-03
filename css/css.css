@@ -293,27 +293,28 @@ main {
 }
 
 /*--------------Anmeldelser sektion--------------*/
-#karrusel {
-  background-color: var(--farve_4);
-}
 
-#Container {
-  background-color: var(--farve_2);
+#karrusel {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 400px;
+  overflow-x: scroll; /*gør sådan man kan scrolle langs x-aksen*/
+  overflow-y: hidden; /*fjener scrool langs y-aksen*/
 }
 
 #anmeldelseContainer {
   display: flex;
   flex-direction: row;
-
+  height: auto;
   gap: 24px;
-  background-color: yellow;
 }
 
 .anmeldelseKort {
   position: relative;
   background-color: var(--farve_5);
-  width: 600px;
+  width: 350px;
   height: 100%;
+  flex-shrink: 0; /*Sørger for at kortene ikke forminskes ned*/
 }
 
 .anmeldelseBillede {
@@ -321,27 +322,38 @@ main {
   width: 100%;
 }
 
+/*Dette bliver vores overlay på billedet, så det er det vi ser når man hover over med musen*/
 .anmeldelseInfo {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, 0.422);
+  background-color: rgba(0, 0, 0, 0.776);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  opacity: 0;
+  align-items: start;
+  padding: 48px;
+  cursor: pointer;
+  opacity: 0; /*Det er denne som gør at det som difult ikke vises */
 }
 
 .anmeldelseInfo:hover {
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  opacity: 1; /*og det er så her hvor man siger at når man hover over infoen skal går synligheden til 100%*/
+  transition: opacity 0.8s ease;
 }
 
 .anmeldelseTekst {
-  padding: 16px;
+  color: var(--farve_1);
+}
+
+.anmeldelseTitel {
+  color: var(--farve_1);
+}
+
+.anmeldelseNavn {
+  color: var(--farve_1);
 }
 
 /*--------------FAQ sektion--------------*/
