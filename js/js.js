@@ -57,7 +57,7 @@ function initApp() {
     knap.addEventListener("click", function () {
       this.classList.toggle(
         "active"
-      ); /*Loop- den kører i gennem listen med alle knapperne og for hver knap den tildeler hver knap en eventlistener. Hvor den skal lytte efter et klik før at funktionen udføres. Funktionen der udføres siger at når knappen klikkes på, så tilføjes class'en active til knappen*/
+      ); /*Loop- den kører i gennem listen (som er blevet lavet med const accordionKnapper) med alle knapperne og for hver knap den tildeler hver knap en eventlistener. Hvor den skal lytte efter et klik før at funktionen udføres. Funktionen der udføres siger at når knappen klikkes på, så tilføjes class'en active til knappen*/
 
       let svar =
         this
@@ -71,8 +71,10 @@ function initApp() {
   });
 }
 
-/*Array med objekter */
+/*------------Anmeldelser sektion------------*/
+/*------------Array med objekter (anmeldelse)---------*/
 const anmeldelser = [
+  /*et objekt hedder anmeldelse */
   {
     id: "1",
     img: "img/anmeldelse1.svg",
@@ -147,30 +149,14 @@ const anmeldelser = [
   },
 ];
 
-/*virker men ikke optimal */
-/*anmeldelser.forEach((anmeldelse) => {
-  document.querySelector(
-    "#anmeldelseContainer"
-  ).innerHTML += `<article class="anmeldelseKort"><h2>${anmeldelse.navn}</h2></article>`;
-});
-*/
-/*function displayAnmeldelser(anmeldelserArray) {anmeldelseContainer.innterHTML = ""; /*Rydder containeren først, det gør man fordi ... */
-/*  for (const anmeldelse of anmeldelserArray) {display}*/
+/*-------funktion der gør sådan den javascript selv automatisk sætter html ind -----*/
 
-/*const anmeldelseContainer = document.querySelector("#anmeldelseContainer");
-
-function displayAnmeldelser(anmeldelseObject) {
-  anmeldelseContainer.innerHTML =
-    ""; /*Rydder containeren først, det gør man fordi ... */
-/*for (const anmeldelse of anmeldelseObject) {
-    anmeldelseContainer.innerHTML += `<article class="anmeldelseKort"><h2>${anmeldelse.navn}</h2></article>`;
-  }
-}
-*/
-
-const anmeldelseContainer = document.querySelector("#anmeldelseContainer");
+const anmeldelseContainer = document.querySelector(
+  "#anmeldelseContainer"
+); /*med denne sætning finder det element med id'et anmeldelseContainer og laver det til en variable*/
 
 function displayAnmeldelse(anmeldelseObject) {
+  /* vi laver en funktion der tager et enkelt anmeldelse objekt ind (anmeldelseObjekt er et parameter, hvilket bare betyder at det er en pladsholder for de værdier der kommer ind i funktionen)*/
   const anmeldelseHTML = `
     <article class="anmeldelseKort">
       <img src="${anmeldelseObject.img}" 
@@ -184,15 +170,22 @@ function displayAnmeldelse(anmeldelseObject) {
         <p class="anmeldelseNavn">- ${anmeldelseObject.navn}</p>
       </div>
     </article>
-  `;
+  `; /*Her har vi så lavet en variable const anmeldelseHTML (det svarer til den html som vi senere gerne vil have sprøjet ind i html'en), hvor vi har lavet en template string (backticks`´), hvilket gør at jeg kan kan skrive det hele i et uden jeg skal lave alle mulige + tegn, sp kan jeg gøre det hele i et */
 
-  anmeldelseContainer.insertAdjacentHTML("beforeend", anmeldelseHTML);
+  anmeldelseContainer.insertAdjacentHTML(
+    "beforeend",
+    anmeldelseHTML
+  ); /* den sætning siger at i vores variable anmeldelseContainer (som vi har defineret til #anmeldelseContainer) der vil vi gerne insert (insertAdjacentHTML(position, htmlString)), så vi siger, at vi gerne vil indsætte vores variable const anmeldelseHTML inde i anmeldelseContainer, lige før den slutter (beforeEnd) */
 }
 
+/* -------Funktion der viser alle anmeldelser---------*/
 function displayAnmeldelser(anmeldelseArray) {
-  anmeldelseContainer.innerHTML = "";
+  /*Vi laver en funktion der tager et array (listen) af anmeldelser som parameter */
+  anmeldelseContainer.innerHTML =
+    ""; /* først sætter vi anmeldelseContainer's innerHTML til tom, så der ikke kommer dubletter når funktionen kaldes flere gange */
   for (const anmeldelse of anmeldelseArray) {
     displayAnmeldelse(anmeldelse);
-  }
-  console.log("Anmeldelser vist");
+  } /* Loop- Denne sætning siger at for hver anmeldelse (objekt) i anmeldelseArray'et, så skal funktionen displayAnmeldelse(anmeldelse) kaldes, og dermed sprøjtes html for alle objekter (anmeldelse) fra vores array (anmeldelser) ind i anmeldelseContainer */
+
+  console.log("Juuhuu Anmeldelser vist");
 }
