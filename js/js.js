@@ -10,6 +10,19 @@ function initApp() {
   console.log("Hjemmesiden er loadet");
 } /*Funktionen her fyrrer displayAnmeldelser af, altså de bliver vist i DOM */
 
+/*--------Navbaren så den skifter farve ved scroll (vi gør sådan at den bliver tilføjet en classe hvis den er blevet scrollet. og den kan vi så style inde i css med farve og transition)------------*/
+window.addEventListener("scroll", function () {
+  /* vi siger at vinduet på websiden skal lytte efter et event (som er scroll) før den må fyrre funktionen af */
+  const navbar =
+    document.querySelector(".navbar"); /* Samler navbar i en variable */
+
+  if (window.scrollY > 500) {
+    navbar.classList.add("scroll");
+  } else {
+    navbar.classList.remove("scroll");
+  }
+}); /*Den siger at hvis windet er scroller mere end 500 px ned, så skal navbaren til føjes class'en scroll. og ellers skal class'en fjernes (hvis der ikke er scrollet mere end 500) */
+
 /*-------CTA knap til købssiden--------*/
 
 function købNuKnap() {
