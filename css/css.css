@@ -43,7 +43,7 @@ h2 {
   font-size: 3.5em;
   color: var(--farve_2);
   text-align: center;
-  padding: 0.6em;
+  padding-bottom: 0.5em;
 }
 
 h3 {
@@ -87,7 +87,8 @@ main {
 }
 
 section {
-  padding: 1.5em 0em;
+  padding-top: 2.5em;
+  height: auto;
 }
 
 /* ------------NAVBAR CSS-----------------*/
@@ -153,11 +154,6 @@ section {
 }
 
 /*-------Hero sektion-------*/
-/*header {
-  display: flex;
-  flex-direction: column;
-}*/
-
 .heroIndhold {
   height: 100vh;
   overflow: hidden;
@@ -213,7 +209,7 @@ section {
   gap: 1em;
   padding: 0.5em 1em;
   width: fit-content;
-  border-radius: 2em;
+  border-radius: 20em;
   position: absolute;
   top: 60%;
   left: 15%;
@@ -250,7 +246,7 @@ section {
   font-size: 1em;
 }
 
-/*-----Højdepunkter-------*/
+/*----------Højdepunkter------------*/
 .højdepunkter {
   display: flex;
   flex-direction: row;
@@ -276,14 +272,14 @@ section {
   overflow: hidden;
 }
 
-/*------Funktioner sektion------*/
+/*----------Specifikationer sektion-------------*/
 .funktionerContainer {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: start;
-  justify-content: center center;
+  justify-content: center;
   gap: 5em;
 }
 
@@ -321,6 +317,13 @@ section {
   height: 3em;
   border-color: #0000009b;
   cursor: pointer;
+}
+
+.dots:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  border-width: 0.4em;
+  border-color: #1a1a1a5e;
 }
 
 .moonlightWhite {
@@ -415,7 +418,7 @@ section {
   justify-content: space-between;
   background-color: var(--farve_1);
   cursor: pointer;
-  padding: 1.5em 4em;
+  padding: 2em 4em;
   width: 100%;
   text-align: left;
   border: none;
@@ -427,7 +430,7 @@ section {
 .active,
 .accordion:hover {
   background-color: var(--farve_1);
-  padding: 1.5em 4em;
+  padding: 2.2em 4em;
 }
 
 .svar {
@@ -440,7 +443,7 @@ section {
 }
 
 .svar p {
-  padding-bottom: 1.5em;
+  padding-bottom: 2em;
 }
 
 .active.accordion .pil {
@@ -451,7 +454,11 @@ section {
 
 /*--------------CTA sektion--------------*/
 
-#CTAsektion {
+.CTAsektionen {
+  padding-bottom: 2em;
+}
+
+#CTAcontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -474,7 +481,7 @@ section {
   gap: 1em;
   padding: 0.5em 1em;
   width: fit-content;
-  border-radius: 2em;
+  border-radius: 20em;
 }
 
 /*-------------Footer---------------*/
@@ -494,6 +501,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  padding-top: 0em;
 }
 
 #footerContainer ul li {
@@ -531,31 +539,10 @@ footer {
   }
 
   h2 {
-    font-size: 2em;
+    font-size: 2.4em;
   }
 
-  .højdepunkter {
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-  }
-
-  .funktionerContainer {
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
-
-  #footerContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2em;
-  }
-
-  #footerContainer ul li {
-    font-size: 0.75em;
-  }
-
+  /**-------Hero sektion-------*/
   .heroTekst {
     position: absolute;
     top: 25%;
@@ -564,15 +551,38 @@ footer {
     max-width: 37.5em;
   }
 
-  /*specifikationer sektion*/
+  /*--------højdepunkter sektion--------*/
+  .højdepunkter {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
 
+  /*--------specifikationer sektion--------*/
   .funktionerContainer {
-    gap: 2px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0em;
   }
 
   .højtalerFarve img {
-    height: 0.125em;
-    width: auto;
+    height: auto;
+    width: 45vh;
+  }
+
+  .farveIndhold {
+    padding: 0em;
+  }
+
+  /*-------------Footer---------------*/
+  #footerContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  #footerContainer ul li {
+    font-size: 1em;
   }
 }
 
