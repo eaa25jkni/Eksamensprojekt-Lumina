@@ -48,6 +48,7 @@ krydsIkon.addEventListener("click", function () {
   ); /* Den funktion der skydes af siger at burgermenuÅben skal fjernes class'en åben (så den håbber tilbage til sin oprindelige tilstand/position (som er sat til right:-250px)) aka den lukkes */
 });
 
+/*------------Farvevalg sektion------------  */
 /*----Array med de fire farver højtaleren fås i */
 const farver = ["moonlightWhite", "popPink", "lavenderViolet", "sageGreen"];
 
@@ -63,7 +64,7 @@ farver.forEach((farve) => {
 const dots =
   document.querySelectorAll(
     ".dots"
-  ); /*søger efter alle elementer i html'en der har class'en dots */
+  ); /*søger efter alle elementer i html'en der har class'en dots (der er fire dots) */
 const højtalerFarve =
   document.querySelector(
     ".højtalerFarve img"

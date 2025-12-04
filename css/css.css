@@ -34,16 +34,16 @@
 /*global typografi*/
 h1 {
   font-family: var(--overskrifter);
-  font-size: 80px;
+  font-size: 5em;
   color: var(--farve_2);
 }
 
 h2 {
   font-family: var(--titel);
-  font-size: 56px;
+  font-size: 3.5em;
   color: var(--farve_2);
   text-align: center;
-  padding: 24px;
+  padding: 0.6em;
 }
 
 h3 {
@@ -54,7 +54,7 @@ h3 {
 
 h4 {
   font-family: var(--titel);
-  font-size: 16px;
+  font-size: 1em;
   color: var(--farve_2);
 }
 
@@ -82,12 +82,12 @@ body {
 }
 
 main {
-  margin-left: 120px;
-  margin-right: 120px;
+  margin-left: 7.5em;
+  margin-right: 7.5em;
 }
 
 section {
-  padding: 32px 0px;
+  padding: 1.5em 0em;
 }
 
 /* ------------NAVBAR CSS-----------------*/
@@ -96,24 +96,24 @@ section {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0.625em 1.25em;
   width: 100%;
   z-index: 10;
   position: fixed;
 }
 
 .navbar img {
-  height: 80px;
+  height: 5em;
 }
 
 .navlinks {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 2em;
 }
 
 .navlinks img {
-  height: 30px;
+  height: 1.85em;
 }
 
 .navIkon {
@@ -123,32 +123,32 @@ section {
 .burgermenuÅben {
   background-color: var(--farve_4);
   height: 100vh;
-  width: 250px;
+  width: 16em;
   position: fixed;
   top: 0;
-  right: -250px; /*-250px*/
+  right: -16em;
   z-index: 5;
-  padding-top: 16px;
+  padding-top: 1em;
   transition: right 0.3s ease;
 }
 
 .burgermenuÅben a {
   display: block;
   color: var(--farve_1);
-  padding: 16px 24px;
+  padding: 1em 1.5em;
   font-family: var(--titel);
-  font-size: 20px;
+  font-size: 1.25em;
   border-bottom: 1px solid var(--farve_1);
   cursor: pointer;
 }
 
 .burgermenuÅben a img {
-  height: 24px;
-  margin-right: 8px;
+  height: 1.5em;
+  margin-right: 0.5em;
 }
 
 .åben.burgermenuÅben {
-  right: 0px;
+  right: 0em;
   scroll-behavior: none;
 }
 
@@ -178,18 +178,18 @@ section {
 .heroTekst {
   position: absolute;
   top: 25%;
-  left: 120px;
+  left: 7.5em;
 
-  max-width: 600px;
+  max-width: 37.5em;
 }
 
 /*------CTA knap------*/
 .CTAknap {
   background-color: var(--farve_4);
   color: var(--farve_1);
-  padding: 12px 48px;
+  padding: 0.75em 3em;
   border: none;
-  border-radius: 32px;
+  border-radius: 2em;
   cursor: pointer;
   text-decoration: none;
   font-family: var(--titel);
@@ -210,10 +210,10 @@ section {
   flex-direction: row;
   align-items: center;
   text-align: center;
-  gap: 16px;
-  padding: 8px 16px;
+  gap: 1em;
+  padding: 0.5em 1em;
   width: fit-content;
-  border-radius: 32px;
+  border-radius: 2em;
   position: absolute;
   top: 60%;
   left: 15%;
@@ -222,7 +222,7 @@ section {
 /*---------Usp baren CSS----------*/
 .uspSektion {
   background-color: var(--farve_5);
-  padding: 24px;
+  padding: 1.5em;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -236,18 +236,18 @@ section {
   display: flex;
   justify-content: center;
   width: 100%;
-  gap: 16px;
+  gap: 1em;
 }
 
 .usp img {
-  height: 32px;
+  height: 2em;
 }
 
 .uspRating {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 /*-----Højdepunkter-------*/
@@ -256,8 +256,8 @@ section {
   flex-direction: row;
   align-items: space-between;
   text-align: center;
-  padding-bottom: 24px;
-  gap: 56px;
+  padding-bottom: 1.5em;
+  gap: 3.5em;
   width: 100%;
 }
 
@@ -265,13 +265,13 @@ section {
   display: flex;
   flex-direction: column;
   text-align: left;
-  gap: 16px;
-  width: 400px;
+  gap: 1em;
+  width: 25em;
 }
 
 .visuelHøjdepunkt {
   width: 100%; /*Så udfylder den hele kortet (de 400px)*/
-  height: 250px;
+  height: 15.625em; /*Svarer til 250px*/
   object-fit: cover;
   overflow: hidden;
 }
@@ -284,7 +284,7 @@ section {
   flex-direction: row;
   align-items: start;
   justify-content: center center;
-  gap: 80px;
+  gap: 5em;
 }
 
 .højtalerFarve img {
@@ -297,28 +297,28 @@ section {
   flex-direction: column;
 
   width: 100%;
-  gap: 8px;
+  gap: 0.5em;
   padding-top: 5%;
 }
 
 .farveIndhold {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 0em;
   align-items: flex-start;
 
-  padding: 16px;
+  padding: 1em;
 }
 
 .farver {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 1em;
 }
 
 .dots {
-  width: 40px;
-  height: 40px;
+  width: 3em;
+  height: 3em;
   border-color: #0000009b;
   cursor: pointer;
 }
@@ -341,7 +341,7 @@ section {
   font-family: var(--broedtekst);
   font-size: 1rem;
   color: var(--farve_2);
-  padding-bottom: 24px;
+  padding-bottom: 1.5em;
 }
 
 /*--------------Anmeldelser sektion--------------*/
@@ -349,7 +349,7 @@ section {
 #karrusel {
   scroll-behavior: smooth;
   width: 100%;
-  height: 400px;
+  height: 25em;
   overflow-x: scroll; /*gør sådan man kan scrolle langs x-aksen*/
   overflow-y: hidden; /*fjener scrool langs y-aksen*/
 }
@@ -358,13 +358,13 @@ section {
   display: flex;
   flex-direction: row;
   height: auto;
-  gap: 24px;
+  gap: 1.5em;
 }
 
 .anmeldelseKort {
   position: relative;
   background-color: var(--farve_5);
-  width: 350px;
+  width: 22em;
   height: 100%;
   flex-shrink: 0; /*Sørger for at kortene ikke forminskes ned*/
 }
@@ -379,14 +379,14 @@ section {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0px;
-  left: 0px;
+  top: 0em;
+  left: 0em;
   background-color: rgba(0, 0, 0, 0.776);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  padding: 48px;
+  padding: 3em;
   cursor: pointer;
   opacity: 0; /*Det er denne som gør at det som difult ikke vises */
 }
@@ -402,7 +402,7 @@ section {
 
 .anmeldelseTitel {
   color: var(--farve_1);
-  font-size: 32px;
+  font-size: 2em;
 }
 
 .anmeldelseNavn {
@@ -415,7 +415,7 @@ section {
   justify-content: space-between;
   background-color: var(--farve_1);
   cursor: pointer;
-  padding: 24px 64px;
+  padding: 1.5em 4em;
   width: 100%;
   text-align: left;
   border: none;
@@ -427,20 +427,20 @@ section {
 .active,
 .accordion:hover {
   background-color: var(--farve_1);
-  padding: 24px 64px;
+  padding: 1.5em 4em;
 }
 
 .svar {
-  max-height: 0px; /*dette gør den skjult som standard*/
+  max-height: 0em; /*dette gør den skjult som standard*/
   overflow: hidden;
   background-color: var(--farve_1);
-  padding: 0px 64px;
+  padding: 0em 4em;
   transition: max-height 0.4s ease-out, padding 0.3s ease;
   border-bottom: #6c6c6c43 2px solid;
 }
 
 .svar p {
-  padding-bottom: 24px;
+  padding-bottom: 1.5em;
 }
 
 .active.accordion .pil {
@@ -456,8 +456,8 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 16px;
-  padding: 48px 24px;
+  gap: 1em;
+  padding: 3em 1.5em;
   border-radius: 16px;
   background-image: url("../img/ctaBG.png");
   background-size: cover;
@@ -471,17 +471,17 @@ section {
   flex-direction: row;
   align-items: center;
   text-align: center;
-  gap: 16px;
-  padding: 8px 16px;
+  gap: 1em;
+  padding: 0.5em 1em;
   width: fit-content;
-  border-radius: 32px;
+  border-radius: 2em;
 }
 
 /*-------------Footer---------------*/
 /* Footer */
 footer {
   background-color: var(--farve_5);
-  padding: 40px 60px;
+  padding: 2.5em 3.75em;
   min-height: 30vh;
   font-family: var(--brødtekst-font);
   width: 100%;
@@ -497,10 +497,10 @@ footer {
 }
 
 #footerContainer ul li {
-  font-size: 16px;
+  font-size: 1em;
   font-family: var(--broedtekst);
   list-style: none;
-  padding-bottom: 8px;
+  padding-bottom: 0.5em;
   cursor: pointer;
   width: fit-content;
 }
@@ -510,58 +510,58 @@ footer {
 }
 
 .kolonne {
-  padding: 16px 16x;
+  padding: 1em 1em;
 }
 
 /* -------RESPONSIVT DESIGN --------*/
 
 /* Mobile enheder */
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   body {
     background-color: aquamarine;
   }
 
   main {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 3em;
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 2em;
   }
 
   .højdepunkter {
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 2em;
   }
 
   .funktionerContainer {
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 1em;
   }
 
   #footerContainer {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 2em;
   }
 
   #footerContainer ul li {
-    font-size: 12px;
+    font-size: 0.75em;
   }
 
   .heroTekst {
     position: absolute;
     top: 25%;
-    left: 80px;
+    left: 5em;
 
-    max-width: 600px;
+    max-width: 37.5em;
   }
 
   /*specifikationer sektion*/
@@ -571,40 +571,40 @@ footer {
   }
 
   .højtalerFarve img {
-    height: 500px;
+    height: 0.125em;
     width: auto;
   }
 }
 
 /* Tablets, iPads, &c. */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 37.5em) and (max-width: 64em) {
   body {
     background-color: rgb(252, 21, 198);
   }
 
   main {
-    margin-left: 56px;
-    margin-right: 56px;
+    margin-left: 3.5em;
+    margin-right: 3.5em;
   }
 
   h1 {
-    font-size: 56px;
+    font-size: 3.5em;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 2.5em;
   }
 
   .højdepunkter {
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 2.5em;
   }
 
   .funktionerContainer {
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 2.5em;
   }
 }
