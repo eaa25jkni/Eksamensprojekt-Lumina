@@ -5,93 +5,97 @@ document.addEventListener("DOMContentLoaded", initApp);
 function initApp() {
   displayAnmeldelser(anmeldelser);
   console.log("Hjemmesiden er loadet");
-
-  /*-------CTA knap til købssiden--------*/
-  document.querySelector(".CTAknap").addEventListener("click", function () {
-    window.location.href = "buy.html";
-  });
-
-  /*-------knap til kurv--------*/
-  document.querySelector("#kurvIkon").addEventListener("click", function () {
-    window.location.href = "cart.html";
-  });
-
-  /*-------burgermenu--------*/
-
-  /*med denne kan vi åbne burgermenuen */
-  const burgermenuIkon = document.querySelector(".burgermenuIkon");
-  const burgermenuÅben = document.querySelector(".burgermenuÅben");
-
-  burgermenuIkon.addEventListener("click", function () {
-    burgermenuÅben.classList.toggle("åben");
-  });
-
-  /*med denne kan vi lukke burgermenuen */
-  const krydsIkon = document.querySelector(".krydsIkon");
-
-  krydsIkon.addEventListener("click", function () {
-    burgermenuÅben.classList.remove("åben");
-  });
-
-  /*----Array med de fire farver højtaleren fås i */
-  const farver = ["moonlightWhite", "popPink", "lavenderViolet", "sageGreen"];
-
-  /*Her bruger jeg dom-manipulation til at tilføje farverne til siden */
-  farver.forEach((farve) => {
-    document.querySelector(
-      ".farver"
-    ).innerHTML += `<button class="dots ${farve}" value="${farve}"></button>`;
-  });
-
-  /*------------Farve skifter------------  */
-  /* Her kommer der en funktion som gør at man kan klikke på farve knapperne og så skifte billedet til den matchende farve */
-  const dots =
-    document.querySelectorAll(
-      ".dots"
-    ); /*søger efter alle elementer i html'en der har class'en dots */
-  const højtalerFarve =
-    document.querySelector(
-      ".højtalerFarve img"
-    ); /*Denne søger efter alle img med class'en højtalerFarve*/
-
-  dots.forEach((dot) => {
-    /*Loop - Dots er i en liste af elementer, så denne vi laver et loop som kører igennem alle elementer med class'en dots */
-    dot.addEventListener("click", () => {
-      /*vi tilføjer så en event listener til hvert dot element, som så skal lytte efter et klik, før funktionen skal udføres*/
-      const value =
-        dot.getAttribute(
-          "value"
-        ); /*Med denne sætning henter vi the value fra den klikkede dot, f.eks hvor vi klikker på dotten med valuen popPink, vil der nu inde i ("value") stå ("popPink") */
-      højtalerFarve.src =
-        "img/" +
-        value +
-        ".png"; /*Med denne linje skifter vi billedet. Den virker således at den tager stien, hvor den går ned i mappen "/img " og så finder den så det billede der matcher med den value der står inde i ("value") +.png. billederne den søger efter er navngivet valuen, så hvis vi siger vi har ("popPink"), finder browseren billedet "popPink" +.png og det sættes ind på pladsen i højtalerFarve */
-    });
-  });
-
-  /*--------------Accordion--------------*/
-  const accordionKnapper =
-    document.querySelectorAll(
-      ".accordion"
-    ); /*Den finder alle elementer med class'en accordion og samler alle elementer i en variable */
-
-  accordionKnapper.forEach((knap) => {
-    knap.addEventListener("click", function () {
-      this.classList.toggle(
-        "active"
-      ); /*Loop- den kører i gennem listen (som er blevet lavet med const accordionKnapper) med alle knapperne og for hver knap den tildeler hver knap en eventlistener. Hvor den skal lytte efter et klik før at funktionen udføres. Funktionen der udføres siger at når knappen klikkes på, så tilføjes class'en active til knappen*/
-
-      let svar =
-        this
-          .nextElementSibling; /*den finder det næste element efter knappen, som i dette tilfælde er svaret der skal vises*/
-      if (svar.style.maxHeight) {
-        svar.style.maxHeight = null;
-      } /*Den siger at hvis svar maxHeight er sat, så skal den lukkes (højden sættes til null)*/ else {
-        svar.style.maxHeight = svar.scrollHeight + "px";
-      } /*ellers skal den åbnes, ved at sætte maxHeight til scrollHeight (den fulde højde af elementet)*/
-    });
-  });
 }
+
+/*-------CTA knap til købssiden--------*/
+
+function købNuKnap() {
+  window.location.href = "buy.html";
+}
+
+/*-------knap til kurv--------*/
+document.querySelector("#kurvIkon").addEventListener("click", function () {
+  window.location.href = "cart.html";
+});
+
+/*-------burgermenu--------*/
+
+/*med denne kan vi åbne burgermenuen */
+const burgermenuIkon = document.querySelector(".burgermenuIkon");
+const burgermenuÅben = document.querySelector(".burgermenuÅben");
+
+burgermenuIkon.addEventListener("click", function () {
+  burgermenuÅben.classList.toggle("åben");
+});
+
+/*med denne kan vi lukke burgermenuen */
+const krydsIkon = document.querySelector(".krydsIkon");
+
+krydsIkon.addEventListener("click", function () {
+  burgermenuÅben.classList.remove("åben");
+});
+
+/*----Array med de fire farver højtaleren fås i */
+const farver = ["moonlightWhite", "popPink", "lavenderViolet", "sageGreen"];
+
+/*Her bruger jeg dom-manipulation til at tilføje farverne til siden */
+farver.forEach((farve) => {
+  document.querySelector(
+    ".farver"
+  ).innerHTML += `<button class="dots ${farve}" value="${farve}"></button>`;
+});
+
+/*------------Farve skifter------------  */
+/* Her kommer der en funktion som gør at man kan klikke på farve knapperne og så skifte billedet til den matchende farve */
+const dots =
+  document.querySelectorAll(
+    ".dots"
+  ); /*søger efter alle elementer i html'en der har class'en dots */
+const højtalerFarve =
+  document.querySelector(
+    ".højtalerFarve img"
+  ); /*Denne søger efter alle img med class'en højtalerFarve*/
+
+dots.forEach((dot) => {
+  /*Loop - Dots er i en liste af elementer, så denne vi laver et loop som kører igennem alle elementer med class'en dots */
+  dot.addEventListener("click", () => {
+    /*vi tilføjer så en event listener til hvert dot element, som så skal lytte efter et klik, før funktionen skal udføres*/
+    const value =
+      dot.getAttribute(
+        "value"
+      ); /*Med denne sætning henter vi the value fra den klikkede dot, f.eks hvor vi klikker på dotten med valuen popPink, vil der nu inde i ("value") stå ("popPink") */
+    højtalerFarve.src =
+      "img/" +
+      value +
+      ".png"; /*Med denne linje skifter vi billedet. Den virker således at den tager stien, hvor den går ned i mappen "/img " og så finder den så det billede der matcher med den value der står inde i ("value") +.png. billederne den søger efter er navngivet valuen, så hvis vi siger vi har ("popPink"), finder browseren billedet "popPink" +.png og det sættes ind på pladsen i højtalerFarve */
+  });
+});
+
+/*--------------Accordion--------------*/
+const accordionKnapper =
+  document.querySelectorAll(
+    ".accordion"
+  ); /*Den finder alle elementer med class'en accordion og samler alle elementer i en variable */
+
+accordionKnapper.forEach((knap) => {
+  knap.addEventListener("click", function () {
+    this.classList.toggle(
+      "active"
+    ); /*Loop- den kører i gennem listen (som er blevet lavet med const accordionKnapper) med alle knapperne og for hver knap den finder, tildeler den hver knap en eventlistener. Hvor den skal lytte efter et klik før at funktionen udføres. Funktionen der udføres siger at når knappen klikkes på, så tilføjes class'en active til knappen*/
+
+    let svar =
+      this
+        .nextElementSibling; /*den finder det næste element efter (lillesøsteren), som i dette tilfælde er svaret der skal vises*/
+    if (svar.style.maxHeight) {
+      /*Den tjekker om maxHeight har en værdi */
+      svar.style.maxHeight = null;
+    } /*Så hvis svar maxHeight har en værdi, så sættes højden sættes til null (går fra at være åben til lukket)*/ else {
+      svar.style.maxHeight = svar.scrollHeight + "px";
+    } /*ellers skal den åbnes, ved at sætte maxHeight til scrollHeight (den fulde højde af elementet svar)*/
+  });
+});
+
+/*Hvis maxHeight har en værdi */
 
 /*------------Anmeldelser sektion------------*/
 /*------------Array med objekter (anmeldelse)---------*/
@@ -104,6 +108,7 @@ const anmeldelser = [
     tekst: "Lige meget hvor du er, er lyden lige god",
     rating: "img/rating45.svg",
     navn: "Simone A.",
+    ikon: "img/infoIkon.svg",
   },
   {
     id: "2",
@@ -184,12 +189,13 @@ function displayAnmeldelse(anmeldelseObject) {
       <img src="${anmeldelseObject.img}" 
            alt="Billede af ${anmeldelseObject.navn}" 
            class="anmeldelseBillede" />
-
+        
       <div class="anmeldelseInfo">
         <h3 class="anmeldelseTitel">${anmeldelseObject.titel}</h3>
         <img class="anmeldelseRating" src="${anmeldelseObject.rating}" alt="Rating af ${anmeldelseObject.navn}">
         <p class="anmeldelseTekst">"${anmeldelseObject.tekst}"</p>
         <p class="anmeldelseNavn">- ${anmeldelseObject.navn}</p>
+
       </div>
     </article>
   `; /*Her har vi så lavet en variable const anmeldelseHTML (det svarer til den html som vi senere gerne vil have sprøjet ind i html'en), hvor vi har lavet en template string (backticks`´), hvilket gør at jeg kan kan skrive det hele i et uden jeg skal lave alle mulige + tegn, sp kan jeg gøre det hele i et */

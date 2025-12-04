@@ -14,8 +14,8 @@
   /* farver */
   --farve_1: #fffdfa; /* Hvid */
   --farve_2: #1a1a1a; /* Sort */
-  --farve_3: #f9c7e1; /* Lys Pink */
-  --farve_4: #cd3488; /* Mørk Pink */
+  --farve_3: #f36db7; /* Lys Pink */
+  --farve_4: #cd3488; /* Mørk Pink CTA */
   --farve_5: #faecf3; /* Bleg Pink*/
   --farve_6: #ceddc8; /* Sage Green */
   --farve_7: #f8c5cd; /* Pop Pink */
@@ -142,7 +142,7 @@ section {
   cursor: pointer;
 }
 
-a img {
+.burgermenuÅben a img {
   height: 24px;
   margin-right: 8px;
 }
@@ -428,7 +428,7 @@ a img {
 }
 
 .svar {
-  max-height: 0px;
+  max-height: 0px; /*dette gør den skjult som standard*/
   overflow: hidden;
   background-color: var(--farve_1);
   padding: 0px 64px;
