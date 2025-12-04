@@ -127,7 +127,7 @@ section {
   position: fixed;
   top: 0;
   right: -250px; /*-250px*/
-  z-index: 20;
+  z-index: 5;
   padding-top: 16px;
   transition: right 0.3s ease;
 }
@@ -192,6 +192,9 @@ section {
   border-radius: 32px;
   cursor: pointer;
   text-decoration: none;
+  font-family: var(--titel);
+  font-size: 1.5rem;
+  color: var(--farve_2);
 }
 
 .CTAknap:hover {
@@ -552,6 +555,25 @@ footer {
   #footerContainer ul li {
     font-size: 12px;
   }
+
+  .heroTekst {
+    position: absolute;
+    top: 25%;
+    left: 80px;
+
+    max-width: 600px;
+  }
+
+  /*specifikationer sektion*/
+
+  .funktionerContainer {
+    gap: 2px;
+  }
+
+  .højtalerFarve img {
+    height: 500px;
+    width: auto;
+  }
 }
 
 /* Tablets, iPads, &c. */
@@ -562,7 +584,7 @@ footer {
 
   main {
     margin-left: 56px;
-    margin-right: 56x;
+    margin-right: 56px;
   }
 
   h1 {
@@ -574,8 +596,9 @@ footer {
   }
 
   .højdepunkter {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 40px;
   }
 

@@ -1,16 +1,20 @@
 console.log("Javascript kører");
 
-document.addEventListener("DOMContentLoaded", initApp);
+document.addEventListener(
+  "DOMContentLoaded",
+  initApp
+); /*når dom er loadet, må den fyrre funktionen initApp af*/
 
 function initApp() {
   displayAnmeldelser(anmeldelser);
   console.log("Hjemmesiden er loadet");
-}
+} /*Funktionen her fyrrer displayAnmeldelser af, altså de bliver vist i DOM */
 
 /*-------CTA knap til købssiden--------*/
 
 function købNuKnap() {
   window.location.href = "buy.html";
+  console.log("Køb nu knap klikket");
 }
 
 /*-------knap til kurv--------*/
@@ -21,18 +25,27 @@ document.querySelector("#kurvIkon").addEventListener("click", function () {
 /*-------burgermenu--------*/
 
 /*med denne kan vi åbne burgermenuen */
-const burgermenuIkon = document.querySelector(".burgermenuIkon");
-const burgermenuÅben = document.querySelector(".burgermenuÅben");
+const burgermenuIkon =
+  document.querySelector(
+    ".burgermenuIkon"
+  ); /*Samler burgermenu i en variable */
+const burgermenuÅben =
+  document.querySelector(".burgermenuÅben"); /*Samler åben i en variable */
 
 burgermenuIkon.addEventListener("click", function () {
-  burgermenuÅben.classList.toggle("åben");
+  /*burgermenuIkon skal så lyttet efter et evemt (et klik) før funktionen som skydes af */ burgermenuÅben.classList.toggle(
+    "åben"
+  ); /*Funktionen der fyrres af siger at på et klik på burgermenuIkon så skal burgermenuÅben tilføjes class'en åben (Toggle)*/
 });
 
 /*med denne kan vi lukke burgermenuen */
-const krydsIkon = document.querySelector(".krydsIkon");
+const krydsIkon =
+  document.querySelector(".krydsIkon"); /*Samler krydsIkon i en variable */
 
 krydsIkon.addEventListener("click", function () {
-  burgermenuÅben.classList.remove("åben");
+  /*krydsIkon skal så lyttet efter et evemt (et klik) før funktionen som skydes af */ burgermenuÅben.classList.remove(
+    "åben"
+  ); /* Den funktion der skydes af siger at burgermenuÅben skal fjernes class'en åben (så den håbber tilbage til sin oprindelige tilstand/position (som er sat til right:-250px)) aka den lukkes */
 });
 
 /*----Array med de fire farver højtaleren fås i */
@@ -85,13 +98,13 @@ accordionKnapper.forEach((knap) => {
 
     let svar =
       this
-        .nextElementSibling; /*den finder det næste element efter (lillesøsteren), som i dette tilfælde er svaret der skal vises*/
+        .nextElementSibling; /*den finder det næste element efter (lillesøsteren), som i dette tilfælde er svar, og gemmer det i en variable svar*/
     if (svar.style.maxHeight) {
-      /*Den tjekker om maxHeight har en værdi */
+      /*Den tjekker om maxHeight har en værdi, den bruger altså højden til at bedømme om svar er åbent eller lukket*/
       svar.style.maxHeight = null;
-    } /*Så hvis svar maxHeight har en værdi, så sættes højden sættes til null (går fra at være åben til lukket)*/ else {
+    } /*Så hvis svar maxHeight har en værdi (som ikke er den omringelige værdi på 0px, ved den at svar er åbent), så sættes højden sættes til null (sættes tilbage til at have en maxHeight på 0), så lukkes den (går fra at være åben til lukket)*/ else {
       svar.style.maxHeight = svar.scrollHeight + "px";
-    } /*ellers skal den åbnes, ved at sætte maxHeight til scrollHeight (den fulde højde af elementet svar)*/
+    } /*ellers hvis svar ikke har en værdi, er den lukket og skal åbnes, det sker ved at sætte maxHeight til scrollHeight (den fulde højde af indholdet i svar)*/
   });
 });
 
