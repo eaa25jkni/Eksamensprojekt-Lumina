@@ -65,6 +65,10 @@ p {
   line-height: 1.5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--farve_1);
   background-size: cover;
@@ -80,6 +84,10 @@ body {
 main {
   margin-left: 120px;
   margin-right: 120px;
+}
+
+section {
+  padding: 32px 0px;
 }
 
 /* ------------NAVBAR CSS-----------------*/
@@ -190,6 +198,7 @@ a img {
   background-color: var(--farve_3);
   color: var(--farve_2);
   transition: 0.6s;
+  transform: scale(1.1);
 }
 
 .CTA {
@@ -438,51 +447,31 @@ a img {
 }
 
 /*--------------CTA sektion--------------*/
-/*Produkt info*/
-#produktSektion {
-  position: relative;
-  height: max-content;
+
+#CTAsektion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 48px 24px;
+  border-radius: 16px;
+  background-image: url("../img/ctaBG.png");
+  background-size: cover;
+  background-position: center;
+  height: auto;
 }
 
-.produkter {
+.CTA2 {
+  background-color: rgba(255, 255, 255, 0.668);
   display: flex;
   flex-direction: row;
-  align-items: space-between;
+  align-items: center;
   text-align: center;
-  padding-bottom: 24px;
-  gap: 56px;
-  width: 100%;
-}
-
-.produkt {
-  background-color: var(--farve_7);
-  width: 350px;
-  height: 500px;
-  position: relative;
-}
-
-.produktbilleder {
-  width: 100%; /*Så udfylder den hele kortet (de 400px)*/
-  height: 90%;
-  object-fit: cover;
-  overflow: hidden;
-}
-
-.produktNavn {
-  background-color: rgba(0, 0, 0, 0.607);
-}
-
-.produktNavn {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background-color: rgba(0, 0, 0, 0.166);
-  border-color: rgba(0, 0, 0, 0.157);
-  color: var(--farve_1);
+  gap: 16px;
   padding: 8px 16px;
-  border-radius: 16px;
-  font-family: var(--broedtekst);
-  font-size: 16px;
+  width: fit-content;
+  border-radius: 32px;
 }
 
 /*-------------Footer---------------*/
@@ -496,22 +485,29 @@ footer {
   height: 100%;
 }
 
-footer table {
+#footerContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
-  border-collapse: collapse;
 }
 
-footer .col {
-  vertical-align: top;
-  padding-right: 0px;
-}
-
-footer p {
+#footerContainer ul li {
   font-size: 16px;
+  font-family: var(--broedtekst);
+  list-style: none;
+  padding-bottom: 8px;
   cursor: pointer;
+  width: fit-content;
 }
-footer p:hover {
+
+#footerContainer ul li:hover {
   text-decoration: underline;
+}
+
+.kolonne {
+  padding: 16px 16x;
 }
 
 /* -------RESPONSIVT DESIGN --------*/
@@ -545,6 +541,16 @@ footer p:hover {
     flex-direction: column;
     align-items: center;
     gap: 16px;
+  }
+
+  #footerContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  #footerContainer ul li {
+    font-size: 12px;
   }
 }
 
