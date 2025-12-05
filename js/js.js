@@ -35,6 +35,10 @@ document.querySelector("#kurvIkon").addEventListener("click", function () {
   window.location.href = "cart.html";
 });
 
+document.querySelector(".logo").addEventListener("click", function () {
+  window.location.href = "index.html";
+});
+
 /*-------burgermenu--------*/
 
 /*med denne kan vi åbne burgermenuen */
@@ -220,7 +224,9 @@ function displayAnmeldelse(anmeldelseObject) {
       <div class="anmeldelseInfo">
         <h3 class="anmeldelseTitel">${anmeldelseObject.titel}</h3>
         <img class="anmeldelseRating" src="${anmeldelseObject.rating}" alt="Rating af ${anmeldelseObject.navn}">
+        <br>
         <p class="anmeldelseTekst">"${anmeldelseObject.tekst}"</p>
+        <br>
         <p class="anmeldelseNavn">- ${anmeldelseObject.navn}</p>
 
       </div>
@@ -244,3 +250,5 @@ function displayAnmeldelser(anmeldelseArray) {
 
   console.log("Juuhuu Anmeldelser vist");
 }
+
+/* -----------købsside---------------- */

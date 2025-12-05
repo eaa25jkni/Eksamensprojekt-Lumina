@@ -41,7 +41,7 @@ h1 {
 
 h2 {
   font-family: var(--titel);
-  font-size: 3.5em;
+  font-size: 3em;
   color: var(--farve_2);
   text-align: center;
   padding-bottom: 0.5em;
@@ -88,8 +88,8 @@ main {
 }
 
 section {
-  padding-top: 3em;
-  height: auto;
+  padding-top: 4em;
+  height: fit-content;
 }
 
 /* ------------NAVBAR CSS-----------------*/
@@ -111,7 +111,7 @@ section {
 }
 
 .navbar img {
-  height: 5em;
+  height: 4.2em;
 }
 
 .navlinks {
@@ -189,7 +189,6 @@ section {
 /*------CTA knap------*/
 .CTAknap {
   background-color: var(--farve_4);
-  color: var(--farve_1);
   padding: 0.75em 3em;
   border: none;
   border-radius: 2em;
@@ -197,7 +196,9 @@ section {
   text-decoration: none;
   font-family: var(--titel);
   font-size: 1.5rem;
-  color: var(--farve_2);
+  color: var(--farve_1);
+  font-weight: bold;
+  width: fit-content;
 }
 
 .CTAknap:hover {
@@ -218,7 +219,7 @@ section {
   width: fit-content;
   border-radius: 20em;
   position: absolute;
-  top: 60%;
+  top: 63%;
   left: 15%;
 }
 
@@ -259,10 +260,9 @@ section {
   flex-direction: row;
   align-items: space-between;
   text-align: center;
-  padding-bottom: 1.5em;
   gap: 3.5em;
   width: 100%;
-  height: auto;
+  height: fit-content;
 }
 
 .højdepunktKort {
@@ -502,7 +502,6 @@ footer {
   width: 100%;
   height: 100%;
 }
-
 #footerContainer {
   display: flex;
   flex-direction: row;
@@ -613,6 +612,7 @@ footer {
     font-size: 2.5em;
   }
 
+  /*-----højdepunkt sektion-------*/
   .højdepunkter {
     flex-direction: row;
     align-items: flex-start;
@@ -620,9 +620,55 @@ footer {
     gap: 2.5em;
   }
 
+  .højdepunktKort {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1em;
+    width: 15em;
+  }
+
   .funktionerContainer {
     flex-direction: column;
     align-items: center;
     gap: 2.5em;
   }
+}
+
+/*--------Købsside-------*/
+
+.informationer2 {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  gap: 0.5em;
+}
+
+#overskriftKS {
+  text-align: left;
+  width: fit-content;
+  padding-bottom: 0em;
+}
+
+#ratingKS {
+  height: 1.5em;
+  width: fit-content;
+}
+
+#CTAknap3 {
+  background-color: var(--farve_4);
+  padding: 0.75em 3em;
+  border: none;
+  border-radius: 2em;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--titel);
+  font-size: 1.5rem;
+  color: var(--farve_1);
+  font-weight: bold;
+  width: fit-content;
+  position: absolute;
+  align-self: center;
+  top: 25em;
 }
