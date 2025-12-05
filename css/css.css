@@ -61,7 +61,7 @@ h4 {
 
 p {
   font-family: var(--broedtekst);
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--farve_2);
   line-height: 1.5;
 }
@@ -77,9 +77,6 @@ body {
 
   margin: 0;
   padding: 0;
-
-  /*display: flex;
-  flex-direction: column; */
 }
 
 main {
@@ -112,6 +109,7 @@ section {
 
 .navbar img {
   height: 4.2em;
+  cursor: pointer;
 }
 
 .navlinks {
@@ -182,6 +180,7 @@ section {
   position: absolute;
   top: 25%;
   left: 7.5em;
+  font-weight: bold;
 
   max-width: 37.5em;
 }
@@ -251,9 +250,12 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
+.uspSektion p {
+  font-size: 1.2em;
+}
 /*----------Højdepunkter------------*/
 .højdepunkter {
   display: flex;
@@ -350,7 +352,7 @@ section {
 
 .svar ul {
   font-family: var(--broedtekst);
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--farve_2);
   padding-bottom: 1.5em;
 }
@@ -452,6 +454,7 @@ section {
 
 .svar p {
   padding-bottom: 2em;
+  font-size: 1.2em;
 }
 
 .active.accordion .pil {
@@ -565,6 +568,21 @@ footer {
   .CTAknap {
     padding: 0.5em 2em;
     font-size: 1.4rem;
+  }
+
+  .usp img {
+    height: 1.6em;
+  }
+
+  .uspRating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+
+  .uspRating img {
+    height: 1.5em;
   }
 
   /*--------højdepunkter sektion--------*/
@@ -689,4 +707,11 @@ footer {
   width: fit-content;
   margin-top: 4em;
   margin-bottom: 4em;
+}
+
+#CTAknap3:hover {
+  background-color: var(--farve_3);
+  color: var(--farve_2);
+  transition: 0.6s;
+  transform: scale(1.1);
 }
