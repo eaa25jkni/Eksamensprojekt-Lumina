@@ -422,10 +422,6 @@ section {
   color: var(--farve_1);
 }
 
-.anmeldelseInfo.infoIkon {
-  opacity: 1;
-}
-
 /*--------------FAQ sektion--------------*/
 .accordion {
   display: flex;

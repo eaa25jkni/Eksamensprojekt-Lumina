@@ -258,5 +258,3 @@ function displayAnmeldelser(anmeldelseArray) {
 
   console.log("Juuhuu Anmeldelser vist");
 }
-
-/* -----------købsside---------------- */
