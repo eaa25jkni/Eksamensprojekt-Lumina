@@ -225,7 +225,7 @@ section {
 /*---------Usp baren CSS----------*/
 .uspSektion {
   background-color: var(--farve_5);
-  padding: 1.5em;
+  padding: 1em;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -254,7 +254,7 @@ section {
 }
 
 .uspSektion p {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 /*----------Højdepunkter------------*/
 .højdepunkter {
@@ -535,10 +535,6 @@ footer {
 
 /* Mobile enheder */
 @media (max-width: 37.5em) {
-  body {
-    background-color: aquamarine;
-  }
-
   main {
     margin-left: 1em;
     margin-right: 1em;
@@ -570,8 +566,12 @@ footer {
     font-size: 1.4rem;
   }
 
+  .uspSektion p {
+    font-size: 0.9em;
+  }
+
   .usp img {
-    height: 1.6em;
+    height: 1.2em;
   }
 
   .uspRating {
@@ -622,10 +622,6 @@ footer {
 
 /* Tablets, iPads, &c. */
 @media (min-width: 37.5em) and (max-width: 64em) {
-  body {
-    background-color: rgb(252, 21, 198);
-  }
-
   main {
     margin-left: 3.5em;
     margin-right: 3.5em;
@@ -637,6 +633,10 @@ footer {
 
   h2 {
     font-size: 2.5em;
+  }
+
+  .uspSektion p {
+    font-size: 1em;
   }
 
   /*-----højdepunkt sektion-------*/
