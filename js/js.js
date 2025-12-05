@@ -21,6 +21,7 @@ window.addEventListener("scroll", function () {
   } else {
     navbar.classList.remove("scroll");
   }
+  console.log("Navbarens farver skifter med scroll");
 }); /*Den siger at hvis windet er scroller mere end 500 px ned, så skal navbaren til føjes class'en scroll. og ellers skal class'en fjernes (hvis der ikke er scrollet mere end 500) */
 
 /*-------CTA knap til købssiden--------*/
@@ -50,9 +51,11 @@ const burgermenuÅben =
   document.querySelector(".burgermenuÅben"); /*Samler åben i en variable */
 
 burgermenuIkon.addEventListener("click", function () {
-  /*burgermenuIkon skal så lyttet efter et evemt (et klik) før funktionen som skydes af */ burgermenuÅben.classList.toggle(
+  /*burgermenuIkon skal så lyttet efter et evemt (et klik) før funktionen som skydes af */
+  burgermenuÅben.classList.toggle(
     "åben"
   ); /*Funktionen der fyrres af siger at på et klik på burgermenuIkon så skal burgermenuÅben tilføjes class'en åben (Toggle)*/
+  console.log("Burgermenuen er nu åben");
 });
 
 /*med denne kan vi lukke burgermenuen */
@@ -60,9 +63,11 @@ const krydsIkon =
   document.querySelector(".krydsIkon"); /*Samler krydsIkon i en variable */
 
 krydsIkon.addEventListener("click", function () {
-  /*krydsIkon skal så lyttet efter et evemt (et klik) før funktionen som skydes af */ burgermenuÅben.classList.remove(
+  /*krydsIkon skal så lyttet efter et evemt (et klik) før funktionen som skydes af */
+  burgermenuÅben.classList.remove(
     "åben"
   ); /* Den funktion der skydes af siger at burgermenuÅben skal fjernes class'en åben (så den håbber tilbage til sin oprindelige tilstand/position (som er sat til right:-250px)) aka den lukkes */
+  console.log("Burgermenu lukket");
 });
 
 /*------------Farvevalg sektion------------  */
@@ -74,6 +79,7 @@ farver.forEach((farve) => {
   document.querySelector(
     ".farver"
   ).innerHTML += `<button class="dots ${farve}" value="${farve}"></button>`;
+  console.log("De fire farver er tilføjet");
 });
 
 /*------------Farve skifter------------  */
@@ -100,6 +106,7 @@ dots.forEach((dot) => {
       value +
       ".png"; /*Med denne linje skifter vi billedet. Den virker således at den tager stien, hvor den går ned i mappen "/img " og så finder den så det billede der matcher med den value der står inde i ("value") +.png. billederne den søger efter er navngivet valuen, så hvis vi siger vi har ("popPink"), finder browseren billedet "popPink" +.png og det sættes ind på pladsen i højtalerFarve */
   });
+  console.log("Farver kan nu skiftes");
 });
 
 /*--------------Accordion--------------*/
@@ -123,7 +130,9 @@ accordionKnapper.forEach((knap) => {
     } /*Så hvis svar maxHeight har en værdi (som ikke er den omringelige værdi på 0px, ved den at svar er åbent), så sættes højden sættes til null (sættes tilbage til at have en maxHeight på 0), så lukkes den (går fra at være åben til lukket)*/ else {
       svar.style.maxHeight = svar.scrollHeight + "px";
     } /*ellers hvis svar ikke har en værdi, er den lukket og skal åbnes, det sker ved at sætte maxHeight til scrollHeight (den fulde højde af indholdet i svar)*/
+    console.log("Accordion knap klikket");
   });
+  console.log("Accordion virker og kan foldes ud og ind");
 });
 
 /*Hvis maxHeight har en værdi */
