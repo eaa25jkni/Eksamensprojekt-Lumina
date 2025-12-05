@@ -148,7 +148,6 @@ const anmeldelser = [
     tekst: "Lige meget hvor du er, er lyden lige god",
     rating: "img/rating45.svg",
     navn: "Simone A.",
-    ikon: "img/infoIkon.svg",
   },
   {
     id: "2",
