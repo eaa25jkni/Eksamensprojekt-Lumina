@@ -7,13 +7,13 @@ I dette projekt har jeg forbedret den gamle landing page for Lumina One, ved at 
 
 Sektions oversigt i html:
 - Navbar (l. 11-40)
-- Hero (l. 42-83)
-- højdepunkterSektion (.l 87-135)
-- specifikationerSektion (l. 139-212)
-- anmeldelserSektion (l- 218-228)
-- faqSektion (l. 231-294)
-- CTAsektionen (l. 298-308)
-- Footer (l. 311-372)
+- Hero (l. 42-85)
+- højdepunkterSektion (.l 87-137)
+- specifikationerSektion (l. 141-214)
+- anmeldelserSektion (l- 220-230)
+- faqSektion (l. 233-296)
+- CTAsektionen (l. 300-310)
+- Footer (l. 313-374)
 
 
 
