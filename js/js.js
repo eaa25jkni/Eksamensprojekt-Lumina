@@ -42,8 +42,7 @@ document.querySelector(".logo").addEventListener("click", function () {
   window.location.href = "index.html";
 });
 
-/*-------burgermenu--------*/
-
+/*--------------------burgermenu----------------*/
 /*med denne kan vi åbne burgermenuen */
 const burgermenuIkon =
   document.querySelector(
@@ -78,33 +77,35 @@ lukBurgermenu.addEventListener("click", function () {
 /*----Array med de fire farver højtaleren fås i */
 const farver = ["moonlightWhite", "popPink", "lavenderViolet", "sageGreen"];
 
+console.log(farver);
+
 /*Her bruger jeg dom-manipulation til at tilføje farverne til siden */
 farver.forEach((farve) => {
   document.querySelector(
     ".farver"
   ).innerHTML += `<button class="dots ${farve}" value="${farve}"></button>`;
   console.log("De fire farver er tilføjet");
-});
+}); /*den siger at for hver farve i arrayet skal den i den container med classen .farver tilføje i html'en en knap med class'en dots og med class'en (${farve}) og value af ${farve} */
 
 /*------------Farve skifter------------  */
 /* Her kommer der en funktion som gør at man kan klikke på farve knapperne og så skifte billedet til den matchende farve */
 const dots =
   document.querySelectorAll(
     ".dots"
-  ); /*søger efter alle elementer i html'en der har class'en dots (der er fire dots) */
+  ); /*søger efter alle elementer i html'en der har class'en dots (der er fire dots som blev tilføjet med JavaScript lige før) */
 const højtalerFarve =
   document.querySelector(
     ".højtalerFarve img"
-  ); /*Denne søger efter alle img med class'en højtalerFarve*/
+  ); /*Denne søger efter img med class'en .højtalerFarve*/
 
 dots.forEach((dot) => {
-  /*Loop - Dots er i en liste af elementer, så denne vi laver et loop som kører igennem alle elementer med class'en dots */
+  /*Loop - Dots er i en liste af elementer, så med denne laver vi et loop som kører igennem alle elementer med class'en dots */
   dot.addEventListener("click", () => {
     /*vi tilføjer så en event listener til hvert dot element, som så skal lytte efter et klik, før funktionen skal udføres*/
     const value =
       dot.getAttribute(
         "value"
-      ); /*Med denne sætning henter vi the value fra den klikkede dot, f.eks hvor vi klikker på dotten med valuen popPink, vil der nu inde i ("value") stå ("popPink") */
+      ); /*Med denne sætning henter vi the value fra den klikkede dot, f.eks hvor vi klikker på dotten med valuen popPink, vil der nu inde i ("value") stå ("popPink") i stringen */
     højtalerFarve.src =
       "img/" +
       value +
@@ -144,7 +145,7 @@ accordionKnapper.forEach((knap) => {
 /*------------Anmeldelser sektion------------*/
 /*------------Array med objekter (anmeldelse)---------*/
 const anmeldelser = [
-  /*et objekt hedder anmeldelse */
+  /*et objekt i anmeldelser hedder anmeldelse */
   {
     id: "1",
     img: "img/anmeldelse1.svg",
@@ -218,6 +219,8 @@ const anmeldelser = [
     navn: "Dicte B.",
   },
 ];
+
+console.log(anmeldelser);
 
 /*-------funktion der gør sådan den javascript selv automatisk sætter html ind -----*/
 

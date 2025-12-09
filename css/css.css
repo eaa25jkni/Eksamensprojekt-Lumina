@@ -26,7 +26,6 @@
   --broedtekst: "open sans", sans-serif;
   --titel: "be vietnam pro", sans-serif;
   --overskrifter: "be vietnam pro", sans-serif;
-  --underskrifter: "open sans", sans-serif;
 }
 
 /*--------Global CSS--------*/
@@ -275,7 +274,7 @@ section {
   display: flex;
   flex-direction: column;
   text-align: left; /*følger venstre side*/
-  gap: 1em;
+  gap: 0.5em;
   flex: 1; /*så fylder de lige meget*/
 }
 
@@ -284,12 +283,13 @@ section {
   height: 15.625em; /*Svarer til 250px*/
   object-fit: cover;
   overflow: hidden;
+  padding-bottom: 1em;
 }
 
 /*----------Specifikationer sektion-------------*/
-.funktionerContainer {
+#funktionerContainer {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -298,14 +298,15 @@ section {
 }
 
 .højtalerFarve img {
-  height: 100%;
+  height: 38em;
   width: auto;
+  justify-content: center;
 }
 
-.informationer {
+#informationer {
   display: flex;
   flex-direction: column;
-
+  justify-content: flex-start;
   width: 100%;
   gap: 0.5em;
   padding-top: 5%;
@@ -340,6 +341,7 @@ section {
   border-color: #1a1a1a5e;
 }
 
+/*her defineres den classe der hedder ${farve} hvert dot har. her definers så farverne der skal være som baggrundsfarve for hver dot*/
 .moonlightWhite {
   background-color: var(--farve_8);
 }
@@ -364,7 +366,7 @@ section {
 /*--------------Anmeldelser sektion--------------*/
 
 #karrusel {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Gør så scrollen glidende */
   width: 100%;
   height: 25em;
   overflow-x: scroll; /*gør sådan man kan scrolle langs x-aksen*/
@@ -379,8 +381,7 @@ section {
 }
 
 .anmeldelseKort {
-  position: relative;
-  background-color: var(--farve_5);
+  position: relative; /*så vi kan placere anmeldelseInfo ovenpå billedet*/
   width: 22em;
   height: 100%;
   flex-shrink: 0; /*Sørger for at kortene ikke forminskes ned*/
@@ -393,7 +394,7 @@ section {
 
 /*Dette bliver vores overlay på billedet, så det er det vi ser når man hover over med musen*/
 .anmeldelseInfo {
-  position: absolute;
+  position: absolute; /*så den ligger ovenpå billedet, fordi den ligger sig efter sin parent*/
   width: 100%;
   height: 100%;
   top: 0em;
@@ -409,7 +410,7 @@ section {
 }
 
 .anmeldelseInfo:hover {
-  opacity: 1; /*og det er så her hvor man siger at når man hover over infoen skal går synligheden til 100%*/
+  opacity: 1; /*og det er så her hvor man siger at når man hover over infoen skal går synligheden til 100% */
   transition: opacity 0.8s ease;
 }
 
@@ -444,9 +445,10 @@ section {
 .active,
 .accordion:hover {
   background-color: var(--farve_1);
-  padding: 2.2em 4em;
+  padding: 2.2em 4em; /*så bliver den lidt større når man hover over*/
 }
 
+/*dette er css'en for svaret i accordionen*/
 .svar {
   max-height: 0em; /*dette gør den skjult som standard*/
   overflow: hidden;
@@ -458,18 +460,20 @@ section {
 
 .svar p {
   padding-bottom: 2em;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .active.accordion .pil {
   /*Her gør jeg sådan at når accordionen er aktiv (så har den nemlig de to klasser .active.acordion) skal billede i class'en pil rotere 180 grader */
-  transform: rotate(180deg);
+  transform: rotate(
+    180deg
+  ); /*rotere pilen rundt når accordionen er åben (er blevet tilføjer klassen .active)*/
   transition: transform 0s ease;
 }
 
 /*--------------CTA sektion--------------*/
 
-.CTAsektionen {
+#CTAsektionen {
   padding-bottom: 2em;
 }
 
@@ -478,6 +482,7 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
   gap: 1em;
   padding: 3em 1.5em;
   border-radius: 16px;
@@ -535,9 +540,9 @@ footer {
   padding: 1em 1em;
 }
 
-/* -------RESPONSIVT DESIGN --------*/
+/* ----------------RESPONSIVT DESIGN -------------------*/
 
-/* Mobile enheder */
+/* ---------------Mobile enheder------------- */
 @media (max-width: 37.5em) {
   main {
     margin-left: 1em;
@@ -556,6 +561,10 @@ footer {
     font-size: 1.2rem;
   }
 
+  p {
+    font-size: 1em;
+  }
+
   /**-------Hero sektion-------*/
   .heroTekst {
     position: absolute;
@@ -570,7 +579,7 @@ footer {
     font-size: 1.4rem;
   }
 
-  .uspSektion p {
+  #uspSektion p {
     font-size: 0.9em;
   }
 
@@ -590,14 +599,18 @@ footer {
   }
 
   /*--------højdepunkter sektion--------*/
-  .højdepunkter {
+  #højdepunkter {
     flex-direction: column;
     align-items: center;
-    gap: 2em;
+    gap: 2.5em;
+  }
+
+  .visuelHøjdepunkt {
+    padding-bottom: 0.5em;
   }
 
   /*--------specifikationer sektion--------*/
-  .funktionerContainer {
+  #funktionerContainer {
     flex-direction: column;
     align-items: center;
     row-gap: 0em;
@@ -612,10 +625,13 @@ footer {
     padding: 0em;
   }
 
+  .svar ul {
+    font-size: 1em;
+  }
+
   /*-------------Footer---------------*/
   #footerContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 2em;
   }
 
@@ -624,6 +640,7 @@ footer {
   }
 }
 
+/*=============================*/
 /* Tablets, iPads, &c. */
 @media (min-width: 37.5em) and (max-width: 64em) {
   main {
@@ -639,12 +656,20 @@ footer {
     font-size: 2.5em;
   }
 
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
   .uspSektion p {
     font-size: 1em;
   }
 
   /*-----højdepunkt sektion-------*/
-  .højdepunkter {
+  #højdepunkter {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -672,13 +697,16 @@ footer {
   }
 
   .højtalerFarve img {
-    height: auto;
-    width: 40vh;
+    height: 35em;
+    width: auto;
+    justify-content: center;
   }
 }
+
+/*=======================*/
 /*--------Købsside-------*/
 
-.informationer2 {
+#informationer2 {
   display: flex;
   flex-direction: column;
 
