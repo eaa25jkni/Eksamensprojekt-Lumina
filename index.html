@@ -14,20 +14,29 @@
         <li class="navIkon">
           <img src="img/profilIkon.svg" alt="Profil" id="profilIkon" />
         </li>
-        <li class="navIkon"><img src="img/kurvIkon.svg" alt="Kurv" id="kurvIkon" /></li>
         <li class="navIkon">
-          <img src="img/burgermenuIkon.svg" alt="Burger Menu" class="burgermenuIkon" />
+          <img src="img/kurvIkon.svg" alt="Kurv" id="kurvIkon" />
+        </li>
+        <li class="navIkon">
+          <img
+            src="img/burgermenuIkon.svg"
+            alt="Burger Menu"
+            class="burgermenuIkon"
+          />
         </li>
       </ul>
 
+      <!-- Burgermenu åben-->
       <div class="burgermenuÅben">
-        <a class="lukBurgermenu"><img src="img/kryds.svg" alt="kryds" class="krydsIkon">Luk</a>
-            <a href="buy.html">Køb nu</a>
-            <a href="#højdepunkterSektion">Højdepunkter</a>
-            <a href="#specifikationerSektion">Specifikationer</a>
-            <a href="#anmeldelserSektion">Anmeldelser</a>
-            <a href="#faqSektion">FAQ</a>
-    </div>
+        <a class="lukBurgermenu"
+          ><img src="img/kryds.svg" alt="kryds" class="krydsIkon" />Luk</a
+        >
+        <a href="buy.html">Køb nu</a>
+        <a href="#højdepunkterSektion">Højdepunkter</a>
+        <a href="#specifikationerSektion">Specifikationer</a>
+        <a href="#anmeldelserSektion">Anmeldelser</a>
+        <a href="#faqSektion">FAQ</a>
+      </div>
     </nav>
 
     <header class="heroIndhold">
@@ -54,15 +63,17 @@
       </div>
 
       <article>
-        <ul class="uspSektion">
+        <ul id="uspSektion">
           <li class="usp">
             <img src="img/leveringIkon.svg" />
             <p>1-4 dages levering</p>
           </li>
-          <li class="uspRating"><a href="#anmeldelserSektion">
-            <img src="img/rating.svg" />
-            <p>1200+ glade kunder</p>
-          </a></li>
+          <li class="uspRating">
+            <a href="#anmeldelserSektion">
+              <img src="img/rating.svg" />
+              <p>1200+ glade kunder</p>
+            </a>
+          </li>
           <li class="usp">
             <img src="img/garantiIkon.svg" />
             <p>2 års garanti</p>
@@ -75,50 +86,51 @@
       <!---------- Højdepunkter sektion ------------>
       <section id="højdepunkterSektion">
         <h2>Udforsk højdepunkterne</h2>
-        <div class="højdepunkter">
-        <article class="højdepunktKort">
-          <video
-            src="img/lydVideo.mp4"
-            autoplay
-            muted
-            loop
-            class="visuelHøjdepunkt"
-          ></video>
-          <h3>Lyd skabt til at fylde hele rummet</h3>
-          <p>
-            Oplev en ny dimension af lyd med Lumina One's 360° immersive lyd,
-            der fylder et rum med rig, klar kraftfuld lyd uanset, hvor end du
-            er.
-          </p>
-        </article>
 
-        <article class="højdepunktKort">
-          <video
-            src="img/løftevideo.mp4"
-            autoplay
-            muted
-            loop
-            class="visuelHøjdepunkt"
-          ></video>
-          <h3>Frihed til at lytte musik hvor end du har lyst</h3>
-          <p>
-            Stilfuldt og funktionelt design. En slidstærk rem som gør højttaleren
-            skabt til at have med rundt overalt.
-          </p>
-        </article>
+        <div id="højdepunkter">
+          <article class="højdepunktKort">
+            <video
+              src="img/lydVideo.mp4"
+              autoplay
+              muted
+              loop
+              class="visuelHøjdepunkt"
+            ></video>
+            <h3>Lyd skabt til at fylde hele rummet</h3>
+            <p>
+              Oplev en ny dimension af lyd med Lumina One's 360° immersive lyd,
+              der fylder et rum med rig, klar kraftfuld lyd uanset, hvor end du
+              er.
+            </p>
+          </article>
 
-        <article class="højdepunktKort">
-          <img
-            src="img/bunde.png"
-            alt="Tre højtalere med forskellige bunde"
-            class="visuelHøjdepunkt"
-          />
-          <h3>Sæt dit eget præg med den udskiftelige bund</h3>
-          <p>
-            Design til enhver lejlighed. Tilpas din Lumina One med den
-            udskiftlige bund, så den passer til lige netop dine behov.
-          </p>
-        </article>
+          <article class="højdepunktKort">
+            <video
+              src="img/løftevideo.mp4"
+              autoplay
+              muted
+              loop
+              class="visuelHøjdepunkt"
+            ></video>
+            <h3>Frihed til at lytte musik hvor end du har lyst</h3>
+            <p>
+              Stilfuldt og funktionelt design. En slidstærk rem som gør
+              højttaleren skabt til at have med rundt overalt.
+            </p>
+          </article>
+
+          <article class="højdepunktKort">
+            <img
+              src="img/bunde.png"
+              alt="Tre højtalere med forskellige bunde"
+              class="visuelHøjdepunkt"
+            />
+            <h3>Sæt dit eget præg med den udskiftelige bund</h3>
+            <p>
+              Design til enhver lejlighed. Tilpas din Lumina One med den
+              udskiftlige bund, så den passer til lige netop dine behov.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -128,76 +140,76 @@
         <h2>Lumina One tæt på</h2>
 
         <div class="funktionerContainer">
-            <div class="højtalerFarve">
-                <img src="img/moonlightWhite.png" alt="Hvid højtaler"/>
+          <div class="højtalerFarve">
+            <img src="img/moonlightWhite.png" alt="Hvid højtaler" />
+          </div>
+
+          <article class="informationer">
+            <div class="farveIndhold">
+              <h3>Farver</h3>
+              <div class="farver">
+                <!-- Farve knapperne bliver tilføjet her med JavaScript -->
+              </div>
             </div>
 
-            <div class="informationer">
-                
-                <div class="farveIndhold">
-                    <h3>Farver</h3>
-                    <div class="farver">
-                        <!-- Farve knapperne bliver tilføjet her med JavaScript -->
-                    </div>
-                </div>
+            <div>
+              <button class="accordion">
+                <h3>Design</h3>
+                <img src="img/pil.svg" alt="pil" class="pil" />
+              </button>
+              <div class="svar">
+                <ul>
+                  <li>Lavet af 100% genanvendeligt plast</li>
+                  <li>Slidstærk rem</li>
+                  <li>18 H x 8 Ø</li>
+                  <li>2 kg</li>
+                  <li>Vand og støvafvisende materiale</li>
+                  <li>Udskiftelig bund</li>
+                </ul>
+              </div>
 
-                <div>
-                <button class="accordion">
-                    <h3>Design</h3>
-                    <img src="img/pil.svg" alt="pil" class="pil" />
-                </button>
-                <div class="svar">
-                    <ul>
-                        <li>Lavet af 100% genanvendeligt plast</li>
-                        <li>Slidstærk rem</li>
-                        <li>18 H x 8 Ø</li>
-                        <li>2 kg</li>
-                        <li>Vand og støvafvisende materiale</li>
-                        <li>Udskiftelig bund</li>
-                    </ul>
-                </div>
+              <button class="accordion">
+                <h3>Lyd</h3>
+                <img src="img/pil.svg" alt="pil" class="pil" />
+              </button>
+              <div class="svar">
+                <ul>
+                  <li>360° immersive lyd</li>
+                  <li>Lyd op til 100 dB</li>
+                  <li>Ai soundboost</li>
+                </ul>
+              </div>
 
-                <button class="accordion">
-                    <h3>Lyd</h3>
-                    <img src="img/pil.svg" alt="pil" class="pil" />
-                </button>
-                <div class="svar">
-                    <ul>
-                        <li>360° immersive lyd</li>
-                        <li>Lyd op til 100 dB</li>
-                        <li>Ai soundboost</li>
-                    </ul>
-                </div>
+              <button class="accordion">
+                <h3>Batteri</h3>
+                <img src="img/pil.svg" alt="pil" class="pil" />
+              </button>
+              <div class="svar">
+                <ul>
+                  <li>24 timers batteritid</li>
+                  <li>1 times opladningstid</li>
+                  <li>Batteri oplades via USB-C</li>
+                </ul>
+              </div>
 
-                <button class="accordion">
-                    <h3>Batteri</h3>
-                    <img src="img/pil.svg" alt="pil" class="pil" />
-                </button>
-                <div class="svar">
-                    <ul>
-                        <li>24 timers batteritid</li>
-                        <li>1 times opladningstid</li>
-                        <li>Batteri oplades via USB-C</li>
-                    </ul>
-                </div>
-
-                <button class="accordion">
-                    <h3>Tilslutning</h3>
-                    <img src="img/pil.svg" alt="pil" class="pil" />
-                </button>
-                <div class="svar">
-                    <ul>
-                        <li>Bluetooth 5.3</li>
-                        <li>AUX-indgang</li>
-                        <li>Mulighed for at parre op til 3 andre LUMINA One enheder med Lumina Audio mobil appen.</li>
-                    </ul>
-                </div>
-                </div>
-
+              <button class="accordion">
+                <h3>Tilslutning</h3>
+                <img src="img/pil.svg" alt="pil" class="pil" />
+              </button>
+              <div class="svar">
+                <ul>
+                  <li>Bluetooth 5.3</li>
+                  <li>AUX-indgang</li>
+                  <li>
+                    Mulighed for at parre op til 3 andre LUMINA One enheder med
+                    Lumina Audio mobil appen.
+                  </li>
+                </ul>
+              </div>
             </div>
+          </article>
         </div>
       </section>
-
 
       <!---------- special feature sektion ------------>
 
@@ -205,76 +217,81 @@
 
       <section id="anmeldelserSektion">
         <h2>#DinLuminaOne</h2>
-        <h3>Del dine oplevelser med Lumina One og bliv en del af fællesskabet!</h3>
+        <h3>
+          Del dine oplevelser med Lumina One og bliv en del af fællesskabet!
+        </h3>
         <br />
         <div id="karrusel">
-            <div id="anmeldelseContainer"></div>
-            <!------bliver tilføjet med javascript fra et array med objekter --->
-
+          <div id="anmeldelseContainer"></div>
+          <!------bliver tilføjet med javascript fra et array med objekter --->
+        </div>
       </section>
 
       <!---------- FAQ sektion ------------>
       <section id="faqSektion">
         <h2>Ofte stillede spørgsmål</h2>
 
-        <div>
-        <button class="accordion">
-          <h3>Kan jeg bruge Lumina One, mens den er til opladning?</h3>
-          <img src="img/pil.svg" alt="pil" class="pil" />
-        </button>
-        <div class="svar">
-          <p>
-            Ja, det er intet problem at høre musik på Lumina One, mens den er
-            til opladning.
-          </p>
-        </div>
+        <article>
+          <button class="accordion">
+            <h3>Kan jeg bruge Lumina One, mens den er til opladning?</h3>
+            <img src="img/pil.svg" alt="pil" class="pil" />
+          </button>
+          <div class="svar">
+            <p>
+              Ja, det er intet problem at høre musik på Lumina One, mens den er
+              til opladning.
+            </p>
+          </div>
 
-        <button class="accordion">
-          <h3> Kan Lumina One holde til vand og fugt?</h3>
-          <img src="img/pil.svg" alt="pil" class="pil" />
-        </button>
-        <div class="svar">
-          <p>
-            Ja, Lumina One kan godt holde til vand og fugt. Højttaleren er designet i støv-og vandafvisende matriale, som gør det til den perfekte højttaler at tage med på badeværelset eller med på en strandtur.
-          </p>
-        </div>
+          <button class="accordion">
+            <h3>Kan Lumina One holde til vand og fugt?</h3>
+            <img src="img/pil.svg" alt="pil" class="pil" />
+          </button>
+          <div class="svar">
+            <p>
+              Ja, Lumina One kan godt holde til vand og fugt. Højttaleren er
+              designet i støv-og vandafvisende matriale, som gør det til den
+              perfekte højttaler at tage med på badeværelset eller med på en
+              strandtur.
+            </p>
+          </div>
 
-         
-        <button class="accordion">
-          <h3>Har Lumina One en mobilapp?</h3>
-          <img src="img/pil.svg" alt="pil" class="pil" />
-        </button>
-        <div class="svar">
-          <p>
-            Ja, med Lumina Audio's mobil app kan connecte en eller flere af dine
-            Lumina højttalere med bluetooth. Med appen kan du opnå fuld personlig
-            customization af bl.a lyden af din højttaler. Hvor meget bas, treble
-            eller volume musikken skal afspilles med. Appen kan downloades i
-            enten App Store eller Google Play.
-          </p>
-        </div>
+          <button class="accordion">
+            <h3>Har Lumina One en mobilapp?</h3>
+            <img src="img/pil.svg" alt="pil" class="pil" />
+          </button>
+          <div class="svar">
+            <p>
+              Ja, med Lumina Audio's mobil app kan connecte en eller flere af
+              dine Lumina højttalere med bluetooth. Med appen kan du opnå fuld
+              personlig customization af bl.a lyden af din højttaler. Hvor meget
+              bas, treble eller volume musikken skal afspilles med. Appen kan
+              downloades i enten App Store eller Google Play.
+            </p>
+          </div>
 
-        <button class="accordion">
-          <h3>Hvornår kan jeg forvente at modtage min pakke?</h3>
-          <img src="img/pil.svg" alt="pil" class="pil" />
-        </button>
-        <div class="svar">
-          <p>
-            Du kan forvente at modtage din pakke inden for 1-4 dage efter køb.
-          </p>
-        </div>
-    
-      <button class="accordion">
-          <h3>Er der garanti ved køb hos Lumina Audio?</h3>
-          <img src="img/pil.svg" alt="pil" class="pil" />
-        </button>
-        <div class="svar">
-          <p>Hos Lumina Audio har vi en 2 årig garanti og 30 dages tilfredshedsgaranti.</p>
-        </div>
+          <button class="accordion">
+            <h3>Hvornår kan jeg forvente at modtage min pakke?</h3>
+            <img src="img/pil.svg" alt="pil" class="pil" />
+          </button>
+          <div class="svar">
+            <p>
+              Du kan forvente at modtage din pakke inden for 1-4 dage efter køb.
+            </p>
+          </div>
 
-        </div>
+          <button class="accordion">
+            <h3>Er der garanti ved køb hos Lumina Audio?</h3>
+            <img src="img/pil.svg" alt="pil" class="pil" />
+          </button>
+          <div class="svar">
+            <p>
+              Hos Lumina Audio har vi en 2 årig garanti og 30 dages
+              tilfredshedsgaranti.
+            </p>
+          </div>
+        </article>
       </section>
-
 
       <!---------- CTA sektion ------------>
 
@@ -285,71 +302,75 @@
           <div class="CTA2">
             <p>Fra 1.995 kr.</p>
             <button class="CTAknap" onclick="købNuKnap()">Køb nu</button>
-      </div>
+          </div>
         </div>
       </section>
-     
-
     </main>
 
     <!---------- Footer ------------>
     <footer>
+      <section id="footerContainer">
+        <div class="kolonne">
+          <ul>
+            <li><h3>Lumina Audio</h3></li>
+            <li>© 2025 Lumina Audio</li>
+            <li>Alle rettigheder forbeholdes</li>
+            <br />
+            <li>Designet i Danmark</li>
+          </ul>
+        </div>
 
-        <section id="footerContainer">
-            <div class="kolonne">
-                <ul>
-                    <li><h3>Lumina Audio</h3></li>
-                    <li>© 2025 Lumina Audio</li>
-                    <li>Alle rettigheder forbeholdes</li>
-                    <br>
-                    <li>Designet i Danmark</li>
-                </ul>
-            </div>
+        <div class="kolonne">
+          <ul>
+            <li><h3>Kontakt</h3></li>
+            <li>Kundeservice</li>
+            <li>Alle rettigheder forbeholdes</li>
+            <li>Find os</li>
+            <li>Job & karrierer</li>
+            <br />
+            <li><h4>Kontakt:</h4></li>
+            <li>
+              <a href="mailto:Lumina@audio.com" class="mail"
+                >Lumina@audio.com</a
+              >
+            </li>
+            <br />
+            <li>
+              <a href="tel:+45 12 34 56 78" class="phone">+45 12 34 56 78</a>
+            </li>
+          </ul>
+        </div>
 
-            <div class="kolonne">
-                <ul>
-                    <li><h3>Kontakt</h3></li>
-                    <li>Kundeservice</li>
-                    <li>Alle rettigheder forbeholdes</li>
-                    <li>Find os</li>
-                    <li>Job & karrierer</li>
-                    <br>
-                    <li><h4>Kontakt:</h4></li>
-                    <li><a href="mailto:Lumina@audio.com" class="mail">Lumina@audio.com</a></li>
-                    <br>
-                    <li><a href="tel:+45 12 34 56 78" class="phone">+45 12 34 56 78</a></li>
-                </ul>
-            </div>
+        <div class="kolonne">
+          <ul>
+            <li><h3>Service</h3></li>
+            <li>Levering & returnering</li>
+            <li>Garanti & reperation</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
 
-            <div class="kolonne">
-                <ul>
-                    <li><h3>Service</h3></li>
-                    <li>Levering & returnering</li>
-                    <li>Garanti & reperation</li>
-                    <li>FAQ</li>
-                </ul>
-            </div>
+        <div class="kolonne">
+          <ul>
+            <li><h3>Om os</h3></li>
+            <li>Om Lumina Audio</li>
+            <li>Vores historie</li>
+            <li>Bæredygtighed</li>
+          </ul>
+        </div>
 
-            <div class="kolonne">
-                <ul>
-                    <li><h3>Om os</h3></li>
-                    <li>Om Lumina Audio</li>
-                    <li>Vores historie</li>
-                    <li>Bæredygtighed</li>
-                </ul>
-            </div>
-
-            <div class="kolonne">
-                <ul>
-                    <li><h3>Følg os</h3></li>
-                    <li>Instagram</li>
-                    <li>TikTok</li>
-                    <li>Facebook</li>
-                    <li>LinkedIn</li>
-                </ul>
-            </div>
-        </section>
+        <div class="kolonne">
+          <ul>
+            <li><h3>Følg os</h3></li>
+            <li>Instagram</li>
+            <li>TikTok</li>
+            <li>Facebook</li>
+            <li>LinkedIn</li>
+          </ul>
+        </div>
+      </section>
     </footer>
+
     <script src="js/js.js"></script>
   </body>
 </html>

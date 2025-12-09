@@ -17,7 +17,9 @@ window.addEventListener("scroll", function () {
     document.querySelector(".navbar"); /* Samler navbar i en variable */
 
   if (window.scrollY > 500) {
-    navbar.classList.add("scroll");
+    navbar.classList.add(
+      "scroll"
+    ); /*Jeg har så inde i css defineret hvordan class'en .active.navbar ser ud (dens farve) */
   } else {
     navbar.classList.remove("scroll");
   }
@@ -54,16 +56,18 @@ burgermenuIkon.addEventListener("click", function () {
   /*burgermenuIkon skal så lyttet efter et evemt (et klik) før funktionen som skydes af */
   burgermenuÅben.classList.toggle(
     "åben"
-  ); /*Funktionen der fyrres af siger at på et klik på burgermenuIkon så skal burgermenuÅben tilføjes class'en åben (Toggle)*/
+  ); /*Funktionen der fyrres af siger at på et klik på burgermenuIkon så skal burgermenuÅben tilføjes class'en .åben (Toggle)*/
   console.log("Burgermenuen er nu åben");
 });
 
 /*med denne kan vi lukke burgermenuen */
-const krydsIkon =
-  document.querySelector(".krydsIkon"); /*Samler krydsIkon i en variable */
+const lukBurgermenu =
+  document.querySelector(
+    ".lukBurgermenu"
+  ); /*Samler lukBurgermenu i en variable */
 
-krydsIkon.addEventListener("click", function () {
-  /*krydsIkon skal så lyttet efter et evemt (et klik) før funktionen som skydes af */
+lukBurgermenu.addEventListener("click", function () {
+  /*lukBurgermenu skal så lyttet efter et evemt (et klik) før funktionen som skydes af */
   burgermenuÅben.classList.remove(
     "åben"
   ); /* Den funktion der skydes af siger at burgermenuÅben skal fjernes class'en åben (så den håbber tilbage til sin oprindelige tilstand/position (som er sat til right:-250px)) aka den lukkes */

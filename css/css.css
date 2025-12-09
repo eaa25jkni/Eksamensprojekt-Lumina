@@ -14,9 +14,9 @@
   /* farver */
   --farve_1: #fffdfa; /* Hvid */
   --farve_2: #1a1a1a; /* Sort */
-  --farve_3: #f36db7; /* Lys Pink */
+  --farve_3: #f36db7; /* Lys Pink Cta hover*/
   --farve_4: #cd3488; /* Mørk Pink CTA */
-  --farve_5: #faecf3; /* Bleg Pink*/
+  --farve_5: #faecf3; /* Sart Pink*/
   --farve_6: #ceddc8; /* Sage Green */
   --farve_7: #f8c5cd; /* Pop Pink */
   --farve_8: #e7e6db; /* Moonlight White */
@@ -98,10 +98,11 @@ section {
   padding: 0.625em 1.25em;
   width: 100%;
   height: 4em;
-  z-index: 10;
+  z-index: 10; /*så er den altid ovenpå de andre elementer*/
   position: fixed;
 }
 
+/*cssen for når nav bliver scrollet (navbar tilføjes classen scroll med javascript. Dette er så css'en for når det sker. der tilføjes en baggrundsfarve og en transition)*/
 .scroll.navbar {
   background-color: var(--farve_5);
   transition: background-color 1s ease;
@@ -126,13 +127,14 @@ section {
   cursor: pointer;
 }
 
+/*Her er udseendet for burgermenuen defineret*/
 .burgermenuÅben {
   background-color: var(--farve_4);
   height: 100vh;
   width: 16em;
   position: fixed;
   top: 0;
-  right: -16em;
+  right: -16em; /*Skjult som standard, da den er placeret uden for skærmen*/
   z-index: 5;
   padding-top: 1em;
   transition: right 0.3s ease;
@@ -153,9 +155,10 @@ section {
   margin-right: 0.5em;
 }
 
+/*Dette er css'en for når burgermenuen er åben. BurgermenuÅben tilføjes class'en .åben med javascript */
 .åben.burgermenuÅben {
-  right: 0em;
-  scroll-behavior: none;
+  right: 0em; /*Nu er den inde på skærmen, i højre side. Altså før brugermenuåben fik tilføjet class'en .åben havde den en placering på -16 em, som var ude af skærmen. Men når class'en -åben tilføjes har den nu en palering på right:0em*/
+  scroll-behavior: none; /*man kan ikke scrolle baggrunden når menuen er åben*/
 }
 
 /*-------Hero sektion-------*/
@@ -223,13 +226,13 @@ section {
 }
 
 /*---------Usp baren CSS----------*/
-.uspSektion {
+#uspSektion {
   background-color: var(--farve_5);
   padding: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  display: flex; /*så ligger det i en flexbox*/
+  flex-direction: row; /*på en række*/
+  justify-content: center; /*vandret*/
+  align-items: center; /*lodret*/
   width: 100%;
   position: absolute; /*Skal være aboslut fordi så ligger den sig efter forældreen som er .videoherobg*/
   bottom: 0; /*Ligger nede i bunden af videoen*/
@@ -250,17 +253,18 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
-.uspSektion p {
+#uspSektion p {
   font-size: 1.1em;
 }
 /*----------Højdepunkter------------*/
-.højdepunkter {
+#højdepunkter {
   display: flex;
   flex-direction: row;
   align-items: space-between;
+  justify-content: space-between;
   text-align: center;
   gap: 3.5em;
   width: 100%;
@@ -270,13 +274,13 @@ section {
 .højdepunktKort {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: left; /*følger venstre side*/
   gap: 1em;
-  width: 25em;
+  flex: 1; /*så fylder de lige meget*/
 }
 
 .visuelHøjdepunkt {
-  width: 100%; /*Så udfylder den hele kortet (de 400px)*/
+  width: 100%; /*Så udfylder den hele kortet*/
   height: 15.625em; /*Svarer til 250px*/
   object-fit: cover;
   overflow: hidden;
